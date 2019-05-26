@@ -4,8 +4,8 @@ from pathlib import Path
 from subprocess import DEVNULL, CalledProcessError, Popen, check_output
 
 HOME_DIR = str(Path.home())
-CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
-CACHE_PATH = os.path.join(CURRENT_DIR, ".cache")
+CACHE_DIR = os.path.join(HOME_DIR, "Library", "Caches", "com.samuelmeuli.time-machine-ignore")
+CACHE_PATH = os.path.join(CACHE_DIR, "excluded")
 
 # Paths to exclude from the Git repo search
 IGNORE_PATHS = [os.path.join(HOME_DIR, ".Trash"), os.path.join(HOME_DIR, "Library")]
@@ -65,6 +65,8 @@ def read_cache():
     :return: List of paths which were previously excluded from Time Machine backups
     :rtype: list<str>
     """
+    if not os.path.isdir(CACHE_DIR):
+        os.mkdir(CACHE_DIR)
     if not os.path.isfile(CACHE_PATH):
         return []
     with open(CACHE_PATH, "rb") as cache:
