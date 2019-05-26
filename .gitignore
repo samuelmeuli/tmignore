@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*$py.class
+
+# Poetry
+*.egg-info/
+dist/

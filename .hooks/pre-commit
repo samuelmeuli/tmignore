@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e  # Exit on subsequent errors
+
+# Black and isort (exit with 1 if files were reformatted)
+make format BLACK_FLAGS="--check" ISORT_FLAGS="--check-only" || (
+	make format &&
+		echo "Python files have been reformatted. Please re-stage and commit your files." &&
+		exit 1
+)
+
+# Flake8
+make lint
