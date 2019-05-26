@@ -17,8 +17,8 @@ def add_exclusion(path):
     :param path: Path to the file or directory to exclude
     :type path: str
     """
-    exclude_cmd = ["tmutil", "addexclusion", path]
-    Popen(exclude_cmd)
+    cmd = ["tmutil", "addexclusion", path]
+    Popen(cmd)
     print(f"Added exclusion: {path}")
 
 
@@ -28,8 +28,8 @@ def remove_exclusion(path):
     :param path: Path to remove the exclusion for
     :type path: str
     """
-    exclude_cmd = ["tmutil", "removeexclusion", path]
-    Popen(exclude_cmd)
+    cmd = ["tmutil", "removeexclusion", path]
+    Popen(cmd)
     print(f"Removed exclusion: {path}")
 
 
