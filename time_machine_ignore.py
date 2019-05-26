@@ -1,14 +1,65 @@
 import os
 import pickle
 from pathlib import Path
-from subprocess import DEVNULL, CalledProcessError, Popen, check_output
+from shutil import rmtree
+from subprocess import DEVNULL, CalledProcessError, Popen, call, check_output
 
+BIN_DIR = "/usr/local/bin"
 HOME_DIR = str(Path.home())
-CACHE_DIR = os.path.join(HOME_DIR, "Library", "Caches", "com.samuelmeuli.time-machine-ignore")
+LAUNCH_AGENTS_DIR = os.path.join(HOME_DIR, "Library", "LaunchAgents")
+SCRIPT_NAME = os.path.basename(__file__)
+SCRIPT_PATH = os.path.realpath(__file__)
+CURRENT_DIR = os.path.dirname(SCRIPT_PATH)
+
+LABEL = "com.samuelmeuli.time-machine-ignore"
+PLIST_NAME = LABEL + ".plist"
+PLIST_PATH = os.path.join(CURRENT_DIR, PLIST_NAME)
+
+SCRIPT_LINK = os.path.join(BIN_DIR, SCRIPT_NAME)
+PLIST_LINK = os.path.join(LAUNCH_AGENTS_DIR, PLIST_NAME)
+
+CACHE_DIR = os.path.join(HOME_DIR, "Library", "Caches", LABEL)
 CACHE_PATH = os.path.join(CACHE_DIR, "excluded")
 
 # Paths to exclude from the Git repo search
 IGNORED_PATHS = [os.path.join(HOME_DIR, ".Trash"), os.path.join(HOME_DIR, "Library")]
+
+
+def install():
+    # Set up launchd user agent (runs script periodically)
+    print("Setting up agent…")
+    create_hard_link(SCRIPT_PATH, SCRIPT_LINK)
+    create_hard_link(PLIST_PATH, PLIST_LINK)
+    call(["launchctl", "load", PLIST_LINK])
+
+
+def uninstall():
+    # Remove created backup exclusions
+    paths_cached = read_cache()
+    for exclusion_to_remove in paths_cached:
+        remove_exclusion(exclusion_to_remove)
+
+    # Remove cache
+    print("Removing files…")
+    rmtree(CACHE_DIR)
+
+    # Remove launchd user agent
+    print("Removing agent…")
+    call(["launchctl", "unload", PLIST_LINK])
+    delete_hard_link(SCRIPT_LINK)
+    delete_hard_link(PLIST_LINK)
+
+    print("Done")
+
+
+def create_hard_link(src, dest):
+    delete_hard_link(dest)
+    os.link(src, dest)
+
+
+def delete_hard_link(path):
+    if os.path.isfile(path):
+        os.unlink(path)
 
 
 def add_exclusion(path):
