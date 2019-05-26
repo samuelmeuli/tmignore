@@ -7,3 +7,6 @@ __pycache__/
 # Poetry
 *.egg-info/
 dist/
+
+# Cache of paths which are excluded from backups
+.cache
