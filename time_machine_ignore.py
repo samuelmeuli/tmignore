@@ -8,7 +8,7 @@ CACHE_DIR = os.path.join(HOME_DIR, "Library", "Caches", "com.samuelmeuli.time-ma
 CACHE_PATH = os.path.join(CACHE_DIR, "excluded")
 
 # Paths to exclude from the Git repo search
-IGNORE_PATHS = [os.path.join(HOME_DIR, ".Trash"), os.path.join(HOME_DIR, "Library")]
+IGNORED_PATHS = [os.path.join(HOME_DIR, ".Trash"), os.path.join(HOME_DIR, "Library")]
 
 
 def add_exclusion(path):
@@ -40,9 +40,9 @@ def find_git_repos():
     :rtype: list<str>
     """
     # Build `find` command which searches for all .git directories and skips the paths which should
-    # be ignored (IGNORE_PATHS)
+    # be ignored (IGNORED_PATHS)
     cmd = ["find", HOME_DIR]
-    for path in IGNORE_PATHS:
+    for path in IGNORED_PATHS:
         cmd += ["-path", path, "-prune", "-o"]
     cmd += ["-type", "d", "-name", ".git", "-print"]
 
