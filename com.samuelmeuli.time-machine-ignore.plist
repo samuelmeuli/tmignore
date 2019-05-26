@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Label</key>
+		<string>com.samuelmeuli.time-machine-ignore</string>
+		<key>ProgramArguments</key>
+		<array>
+			<string>/usr/local/bin/python3</string>
+			<string>/usr/local/bin/time_machine_ignore.py</string>
+		</array>
+		<key>StartInterval</key>
+		<integer>86400</integer>
+	</dict>
+</plist>
