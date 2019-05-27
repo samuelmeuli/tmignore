@@ -1,10 +1,11 @@
 import json
 import os
 import pickle
+import sys
 from fnmatch import fnmatch
 from pathlib import Path
 from shutil import rmtree
-from subprocess import DEVNULL, CalledProcessError, Popen, call, check_output
+from subprocess import DEVNULL, PIPE, CalledProcessError, Popen, call, check_output
 
 BIN_DIR = "/usr/local/bin"
 HOME_DIR = str(Path.home())
@@ -93,7 +94,12 @@ def remove_exclusion(path):
     :type path: str
     """
     cmd = ["tmutil", "removeexclusion", path]
-    Popen(cmd)
+    process = Popen(cmd, stderr=PIPE)
+    for line in process.stderr:
+        line_str = line.decode("utf-8")
+        # Ignore errors for deleted files/directories
+        if not line_str.endswith("Error (-43) while attempting to change exclusion setting.\n"):
+            sys.stdout.write(f"{line_str}\n")
     print(f"Removed exclusion: {path}")
 
 
