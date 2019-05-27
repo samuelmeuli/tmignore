@@ -16,7 +16,19 @@ _If your Python installation is not at `/usr/local/bin/python3`, you'll need to 
 
 ## Configuration
 
-You can change how often you want the script to run in the [plist](com.samuelmeuli.time-machine-ignore.plist) file. Simply change the `StartInterval` value to the desired interval (in seconds).
+- If there are certain files ignored by Git which you _do_ want to back up (e.g. configuration or password files), you can create a `config.json` file in the project root and add these files to the **whitelist**:
+
+```json
+{
+  "whitelist": [
+    "*/application.yml",
+    "*/*config*.json",
+    "*/.env.*"
+  ]
+}
+```
+
+- You can change **how often you want the script to run** in the [plist](com.samuelmeuli.time-machine-ignore.plist) file. Simply change the `StartInterval` value to the desired interval (in seconds).
 
 ## Uninstall
 

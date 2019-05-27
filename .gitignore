@@ -7,3 +7,6 @@ __pycache__/
 # Poetry
 *.egg-info/
 dist/
+
+# Configuration file
+config.json

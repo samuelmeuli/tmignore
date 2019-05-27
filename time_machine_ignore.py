@@ -1,5 +1,7 @@
+import json
 import os
 import pickle
+from fnmatch import fnmatch
 from pathlib import Path
 from shutil import rmtree
 from subprocess import DEVNULL, CalledProcessError, Popen, call, check_output
@@ -10,6 +12,7 @@ LAUNCH_AGENTS_DIR = os.path.join(HOME_DIR, "Library", "LaunchAgents")
 SCRIPT_NAME = os.path.basename(__file__)
 SCRIPT_PATH = os.path.realpath(__file__)
 CURRENT_DIR = os.path.dirname(SCRIPT_PATH)
+CONFIG_PATH = os.path.join(CURRENT_DIR, "config.json")
 
 LABEL = "com.samuelmeuli.time-machine-ignore"
 PLIST_NAME = LABEL + ".plist"
@@ -60,6 +63,16 @@ def create_hard_link(src, dest):
 def delete_hard_link(path):
     if os.path.isfile(path):
         os.unlink(path)
+
+
+def read_config():
+    """Read and parse the config.json file in the project root
+
+    :return: Parsed config.json file
+    :rtype: dict
+    """
+    with open(CONFIG_PATH, "r") as file:
+        return json.load(file)
 
 
 def add_exclusion(path):
@@ -157,6 +170,10 @@ def main():
     repo_paths = find_git_repos()
     print(f"Found {len(repo_paths)} Git repositories")
 
+    # Read whitelist from config.json
+    config = read_config()
+    whitelist = config["whitelist"] if "whitelist" in config else []
+
     # Obtain list of ignored files for all Git repos (both local and global .gitignore files are
     # considered)
     paths_to_exclude = []
@@ -164,9 +181,13 @@ def main():
         cmd = ["git", "ls-files", "--directory", "--exclude-standard", "--ignored", "--others"]
         ignored_files_output = check_output(cmd, cwd=repo_path)
         ignored_files = ignored_files_output.decode("utf-8").split("\n")[:-1]
-        paths_to_exclude += [
-            os.path.join(repo_path, ignored_file) for ignored_file in ignored_files
-        ]
+        for ignored_file in ignored_files:
+            ignored_path = os.path.join(repo_path, ignored_file)
+            # Only exclude path from backups if it is not whitelisted
+            if any(fnmatch(ignored_path, pattern) for pattern in whitelist):
+                print(f"Skipping whitelisted file: {ignored_path}")
+            else:
+                paths_to_exclude.append(ignored_path)
 
     # Compare identified ignore paths with cached ones
     paths_cached = read_cache()
