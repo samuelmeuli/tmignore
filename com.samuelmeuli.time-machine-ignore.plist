@@ -11,5 +11,9 @@
 		</array>
 		<key>StartInterval</key>
 		<integer>86400</integer>
+		<key>StandardOutPath</key>
+		<string>/tmp/time-machine-ignore.out</string>
+		<key>StandardErrorPath</key>
+		<string>/tmp/time-machine-ignore.err</string>
 	</dict>
 </plist>
