@@ -16,7 +16,7 @@ _If your Python installation is not at `/usr/local/bin/python3`, you'll need to 
 
 ## Configuration
 
-- If there are certain files ignored by Git which you _do_ want to back up (e.g. configuration or password files), you can create a `config.json` file in the `time-machine-ignore` folder and add these files to the **whitelist**:
+- If there are certain files ignored by Git which you _do_ want to back up (e.g. configuration or password files), you can create a `config.json` file in a `~/.config/time-machine-ignore/` folder and add these files to the **whitelist**:
 
 ```json
 {

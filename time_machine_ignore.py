@@ -13,7 +13,7 @@ LAUNCH_AGENTS_DIR = os.path.join(HOME_DIR, "Library", "LaunchAgents")
 SCRIPT_NAME = os.path.basename(__file__)
 SCRIPT_PATH = os.path.realpath(__file__)
 CURRENT_DIR = os.path.dirname(SCRIPT_PATH)
-CONFIG_PATH = os.path.join(CURRENT_DIR, "config.json")
+CONFIG_PATH = os.path.join(HOME_DIR, ".config", "time-machine-ignore", "config.json")
 
 LABEL = "com.samuelmeuli.time-machine-ignore"
 PLIST_NAME = LABEL + ".plist"
