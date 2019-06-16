@@ -67,11 +67,14 @@ def delete_hard_link(path):
 
 
 def read_config():
-    """Read and parse the config.json file in the project root
+    """Read and parse the config.json file in the project root. If it does not exist, return an
+    empty dict
 
     :return: Parsed config.json file
     :rtype: dict
     """
+    if not os.path.isfile(CONFIG_PATH):
+        return {}
     with open(CONFIG_PATH, "r") as file:
         return json.load(file)
 
