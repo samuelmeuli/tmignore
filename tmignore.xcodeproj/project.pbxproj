@@ -30,10 +30,10 @@
 
 /* Begin PBXFileReference section */
 		7E33F60C234124B500E9A349 /* tmignore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tmignore; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E33F60F234124B600E9A349 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; tabWidth = 4; };
+		7E33F60F234124B600E9A349 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7E33F616234124F200E9A349 /* Git.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git.swift; sourceTree = "<group>"; };
-		7E33F6182341252300E9A349 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; tabWidth = 4; };
-		7E33F61D2341260900E9A349 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; tabWidth = 4; };
+		7E33F6182341252300E9A349 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		7E33F61D2341260900E9A349 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7E33F61F2341261900E9A349 /* TimeMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMachine.swift; sourceTree = "<group>"; };
 		7E33F6212341262D00E9A349 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
