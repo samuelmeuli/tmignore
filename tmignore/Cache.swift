@@ -35,11 +35,12 @@ class Cache {
 			do {
 				let json = try JSON(data: jsonData as Data)
 				paths = json["paths"].arrayValue.map { $0.stringValue }
+				os_log("Found cache file at %s", type: .debug, cacheFilePath)
 			} catch {
 				os_log("Could not parse cache file: %s", type: .error, error.localizedDescription)
 			}
 		} else {
-			os_log("No cache file found at %s", cacheFilePath)
+			os_log("No cache file found at %s", type: .debug, cacheFilePath)
 		}
 		return paths
 	}
@@ -82,10 +83,12 @@ class Cache {
 		do {
 			if FileManager.default.fileExists(atPath: cacheFilePath) {
 				// Replace content of existing cache file
+				os_log("Updating cache file at %s", type: .debug, cacheFilePath)
 				let cacheFileURL = URL(fileURLWithPath: cacheFilePath)
 				try jsonData.write(to: cacheFileURL)
 			} else {
 				// Create new cache file
+				os_log("Creating new cache file at %s", type: .debug, cacheFilePath)
 				FileManager.default.createFile(atPath: cacheFilePath, contents: jsonData)
 			}
 		} catch {

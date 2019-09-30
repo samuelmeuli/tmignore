@@ -10,6 +10,7 @@ class Git {
 		`.gitignore` files are considered)
 	*/
 	static func getIgnoredFiles(repoPath: String) -> [String] {
+		os_log("Obtaining list of ignored files for repo at %s…", type: .debug, repoPath)
 		var ignoredFiles = [String]()
 
 		let command = "git -C \(repoPath) ls-files --directory --exclude-standard --ignored --others"
@@ -27,6 +28,7 @@ class Git {
 			ignoredFiles = ignoredFilesRel.map { "\(repoPath)/\($0)" }
 		}
 
+		os_log("Found %d ignored files for repo at %s", type: .debug, ignoredFiles.count, repoPath)
 		return ignoredFiles
 	}
 

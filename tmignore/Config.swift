@@ -34,6 +34,7 @@ class Config {
 		if let jsonData = NSData(contentsOfFile: configPath) {
 			do {
 				let json = try JSON(data: jsonData as Data)
+				os_log("Found config file at %s", type: .debug, configPath)
 				ignoredPaths += json["ignoredPaths"].arrayValue.map { $0.stringValue }
 				whitelist = json["whitelist"].arrayValue.map { $0.stringValue }
 			} catch {
@@ -41,7 +42,7 @@ class Config {
 				throw ConfigError.parseFailed
 			}
 		} else {
-			os_log("No config file found at %s", configPath)
+			os_log("No config file found at %s", type: .debug, configPath)
 		}
 	}
 }

@@ -10,6 +10,7 @@ let config = try Config()
 let repoPaths = Git.findRepos(ignoredPaths: config.ignoredPaths)
 
 // Build list of files/directories which should be excluded from Time Machine backups
+os_log("Applying whitelist…")
 var exclusions = [String]()
 for repoPath in repoPaths {
 	for path in Git.getIgnoredFiles(repoPath: repoPath) {
@@ -21,6 +22,7 @@ for repoPath in repoPaths {
 		}
 	}
 }
+os_log("Identified %d paths to exclude from backups", exclusions.count)
 
 // Compare generated exclusion list with the one from the previous script run, calculate diff
 let cachedExclusions = cache.read()
