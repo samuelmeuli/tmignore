@@ -90,6 +90,7 @@
 				7E33F609234124B500E9A349 /* Frameworks */,
 				7E33F60A234124B500E9A349 /* CopyFiles */,
 				7E33F6232341264E00E9A349 /* SwiftLint */,
+				7E2946562343B7C00002F8C3 /* Copy binary */,
 			);
 			buildRules = (
 			);
@@ -140,6 +141,24 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7E2946562343B7C00002F8C3 /* Copy binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy binary";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"dist\" && cp \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}\" \"dist/${EXECUTABLE_NAME}\"\n";
+		};
 		7E33F6232341264E00E9A349 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
