@@ -1,5 +1,9 @@
 # Source: https://github.com/sindresorhus/swiftlint-sindre (with modifications)
 
+# Added
+excluded:
+  - .build # Ignore Swift Package Manager dependencies
+
 whitelist_rules:
   - anyobject_protocol
   - array_init

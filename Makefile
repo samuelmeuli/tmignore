@@ -1,10 +1,13 @@
-OUTPUT_DIR = ./dist/
-SCHEME_NAME = tmignore
+BUILD_DIR = ./.build/
+BUILD_PATH = ./.build/x86_64-apple-macosx/release/tmignore
+DIST_DIR = ./dist/
 
 .PHONY: build
 build:
-	xcodebuild archive -derivedDataPath $(shell mktemp -d) -scheme ${SCHEME_NAME}
+	swift build --configuration release --disable-sandbox
+	mkdir -p ${DIST_DIR}
+	mv ${BUILD_PATH} ${DIST_DIR}
 
 .PHONY: clean
 clean:
-	rm -rf ${OUTPUT_DIR}
+	rm -rf ${BUILD_DIR} ${DIST_DIR}

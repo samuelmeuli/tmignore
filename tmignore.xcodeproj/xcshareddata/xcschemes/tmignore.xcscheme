@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E33F60B234124B500E9A349"
+               BlueprintIdentifier = "tmignore::tmignore"
                BuildableName = "tmignore"
                BlueprintName = "tmignore"
                ReferencedContainer = "container:tmignore.xcodeproj">
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "tmignore::tmignoreTests"
-               BuildableName = "tmignoreTests.xctest"
-               BlueprintName = "tmignoreTests"
-               ReferencedContainer = "container:tmignore.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -54,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E33F60B234124B500E9A349"
+            BlueprintIdentifier = "tmignore::tmignore"
             BuildableName = "tmignore"
             BlueprintName = "tmignore"
             ReferencedContainer = "container:tmignore.xcodeproj">
