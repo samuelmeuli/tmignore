@@ -8,6 +8,10 @@ build:
 	mkdir -p ${DIST_DIR}
 	mv ${BUILD_PATH} ${DIST_DIR}
 
+.PHONY: run
+run:
+	swift run
+
 .PHONY: clean
 clean:
 	rm -rf ${BUILD_DIR} ${DIST_DIR}
