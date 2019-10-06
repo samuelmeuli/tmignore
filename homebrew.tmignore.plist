@@ -7,6 +7,6 @@
 	<key>Program</key>
 	<string>/usr/local/bin/tmignore</string>
 	<key>StartInterval</key>
-	<integer>86</integer>
+	<integer>86400</integer>
 </dict>
 </plist>
