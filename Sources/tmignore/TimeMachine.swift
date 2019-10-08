@@ -1,5 +1,4 @@
 import Foundation
-import os.log
 
 /**
 	Class for modifying the list of files/directories which should be excluded from Time Machine
@@ -12,9 +11,9 @@ class TimeMachine {
 	static func addExclusion(path: String) {
 		let (status, _, stdErr) = runCommand(command: "tmutil addexclusion \(path)")
 		if status == 0 {
-			os_log("Added Time Machine exclusion: %s", type: .debug, path)
+			logger.debug("Added Time Machine exclusion: \(path)")
 		} else {
-			os_log("Failed to add Time Machine exclusion: %s", type: .error, stdErr ?? "")
+			logger.error("Failed to add Time Machine exclusion: \(stdErr ?? "")")
 		}
 	}
 
@@ -28,9 +27,9 @@ class TimeMachine {
 			// 213: File path wasn't found and could therefore not be excluded from a Time Machine
 			// backup. This error occurs for cached exlusions which were deleted, therefore it is
 			// ignored
-			os_log("Removed Time Machine exclusion: %s", type: .debug, path)
+			logger.debug("Removed Time Machine exclusion: \(path)")
 		} else {
-			os_log("Failed to remove Time Machine exclusion: %s", type: .error, stdErr ?? "")
+			logger.error("Failed to remove Time Machine exclusion: \(stdErr ?? "")")
 		}
 	}
 }

@@ -1,5 +1,7 @@
 import Foundation
-import os.log
+import Logging
+
+let logger = Logger(label: "com.samuelmeuli.tmignore")
 
 let cache = Cache()
 
@@ -10,7 +12,7 @@ let config = try Config()
 let repoPaths = Git.findRepos(ignoredPaths: config.ignoredPaths)
 
 // Build list of files/directories which should be excluded from Time Machine backups
-os_log("Applying whitelist…")
+logger.info("Applying whitelist…")
 var exclusions = [String]()
 for repoPath in repoPaths {
 	for path in Git.getIgnoredFiles(repoPath: repoPath) {
@@ -18,11 +20,11 @@ for repoPath in repoPaths {
 		if config.whitelist.allSatisfy({ !pathMatchesGlob(glob: $0, path: path) }) {
 			exclusions.append(path)
 		} else {
-			os_log("Skipping whitelisted file: %s", type: .debug, path)
+			logger.debug("Skipping whitelisted file: \(path)")
 		}
 	}
 }
-os_log("Identified %d paths to exclude from backups", exclusions.count)
+logger.info("Identified \(exclusions.count) paths to exclude from backups")
 
 // Compare generated exclusion list with the one from the previous script run, calculate diff
 let cachedExclusions = cache.read()
@@ -32,11 +34,11 @@ let (
 ) = getDiff(elementsV1: cachedExclusions, elementsV2: exclusions)
 
 // Add/remove backup exclusions
-os_log("Excluding %d files/directories from future backups…", exclusionsToAdd.count)
+logger.info("Excluding \(exclusionsToAdd.count) files/directories from future backups…")
 for exclusionToAdd in exclusionsToAdd {
 	TimeMachine.addExclusion(path: exclusionToAdd)
 }
-os_log("Removing backup exclusions for %d files/directories…", exclusionsToRemove.count)
+logger.info("Removing \(exclusionsToRemove.count) backup exclusions…")
 for exclusionToRemove in exclusionsToRemove {
 	TimeMachine.removeExclusion(path: exclusionToRemove)
 }
@@ -44,4 +46,4 @@ for exclusionToRemove in exclusionsToRemove {
 // Update cache file
 cache.write(paths: exclusions)
 
-os_log("Finished update")
+logger.info("Finished update")

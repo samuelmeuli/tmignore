@@ -9,6 +9,10 @@ let package = Package(
 	],
 	dependencies: [
 		.package(
+			url: "https://github.com/apple/swift-log.git",
+			from: "1.0.0"
+		),
+		.package(
 			url: "https://github.com/SwiftyJSON/SwiftyJSON.git",
 			from: "5.0.0"
 		)
@@ -17,6 +21,7 @@ let package = Package(
 		.target(
 			name: "tmignore",
 			dependencies: [
+				"Logging",
 				"SwiftyJSON"
 			]
 		)

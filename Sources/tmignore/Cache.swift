@@ -1,5 +1,4 @@
 import Foundation
-import os.log
 import SwiftyJSON
 
 /**
@@ -35,12 +34,12 @@ class Cache {
 			do {
 				let json = try JSON(data: jsonData as Data)
 				paths = json["paths"].arrayValue.map { $0.stringValue }
-				os_log("Found cache file at %s", type: .debug, cacheFilePath)
+				logger.debug("Found cache file at \(cacheFilePath)")
 			} catch {
-				os_log("Could not parse cache file: %s", type: .error, error.localizedDescription)
+				logger.error("Could not parse cache file: \(error.localizedDescription)")
 			}
 		} else {
-			os_log("No cache file found at %s", type: .debug, cacheFilePath)
+			logger.debug("No cache file found at \(cacheFilePath)")
 		}
 		return paths
 	}
@@ -55,10 +54,8 @@ class Cache {
 		do {
 			jsonData = try JSON(["paths": paths]).rawData()
 		} catch {
-			os_log(
-				"Could not convert cache JSON into raw data: %s",
-				type: .error,
-				error.localizedDescription
+			logger.error(
+				"Could not convert cache JSON into raw data: \(error.localizedDescription)"
 			)
 			return
 		}
@@ -70,11 +67,8 @@ class Cache {
 				withIntermediateDirectories: true
 			)
 		} catch {
-			os_log(
-				"Could not create cache directory at %s: %s",
-				type: .error,
-				cacheDirPath,
-				error.localizedDescription
+			logger.error(
+				"Could not create cache directory at \(cacheDirPath): \(error.localizedDescription)"
 			)
 			return
 		}
@@ -83,20 +77,17 @@ class Cache {
 		do {
 			if FileManager.default.fileExists(atPath: cacheFilePath) {
 				// Replace content of existing cache file
-				os_log("Updating cache file at %s", type: .debug, cacheFilePath)
+				logger.debug("Updating cache file at \(cacheFilePath)")
 				let cacheFileURL = URL(fileURLWithPath: cacheFilePath)
 				try jsonData.write(to: cacheFileURL)
 			} else {
 				// Create new cache file
-				os_log("Creating new cache file at %s", type: .debug, cacheFilePath)
+				logger.debug("Creating new cache file at \(cacheFilePath)")
 				FileManager.default.createFile(atPath: cacheFilePath, contents: jsonData)
 			}
 		} catch {
-			os_log(
-				"Could not save cache file to %s: %s",
-				type: .error,
-				cacheFilePath,
-				error.localizedDescription
+			logger.error(
+				"Could not save cache file to \(cacheFilePath): \(error.localizedDescription)"
 			)
 		}
 	}

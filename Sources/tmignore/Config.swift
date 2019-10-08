@@ -1,5 +1,4 @@
 import Foundation
-import os.log
 import SwiftyJSON
 
 enum ConfigError: Error {
@@ -34,15 +33,15 @@ class Config {
 		if let jsonData = NSData(contentsOfFile: configPath) {
 			do {
 				let json = try JSON(data: jsonData as Data)
-				os_log("Found config file at %s", type: .debug, configPath)
+				logger.debug("Found config file at \(configPath)")
 				ignoredPaths += json["ignoredPaths"].arrayValue.map { $0.stringValue }
 				whitelist = json["whitelist"].arrayValue.map { $0.stringValue }
 			} catch {
-				os_log("Could not parse config file: %s", type: .error, error.localizedDescription)
+				logger.error("Could not parse config file: \(error.localizedDescription)")
 				throw ConfigError.parseFailed
 			}
 		} else {
-			os_log("No config file found at %s", type: .debug, configPath)
+			logger.debug("No config file found at \(configPath)")
 		}
 	}
 }

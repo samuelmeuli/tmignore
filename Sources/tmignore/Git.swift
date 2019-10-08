@@ -1,5 +1,4 @@
 import Foundation
-import os.log
 
 /**
 	Class for Git operations
@@ -10,25 +9,22 @@ class Git {
 		`.gitignore` files are considered)
 	*/
 	static func getIgnoredFiles(repoPath: String) -> [String] {
-		os_log("Obtaining list of ignored files for repo at %s…", type: .debug, repoPath)
+		logger.debug("Obtaining list of ignored files for repo at \(repoPath)…")
 		var ignoredFiles = [String]()
 
 		let command = "git -C \(repoPath) ls-files --directory --exclude-standard --ignored --others"
 		let (status, stdout, stderr) = runCommand(command: command)
 
 		if status != 0 {
-			os_log(
-				"Error obtaining list of ignored files for repository at path %s: %s",
-				type: .error,
-				repoPath,
-				stderr ?? ""
+			logger.error(
+				"Error obtaining list of ignored files for repository at path \(repoPath): \(stderr ?? "")"
 			)
 		} else {
 			let ignoredFilesRel = splitLines(linesStr: stdout)
 			ignoredFiles = ignoredFilesRel.map { "\(repoPath)/\($0)" }
 		}
 
-		os_log("Found %d ignored files for repo at %s", type: .debug, ignoredFiles.count, repoPath)
+		logger.debug("Found \(ignoredFiles.count) ignored files for repo at \(repoPath)")
 		return ignoredFiles
 	}
 
@@ -38,7 +34,7 @@ class Git {
 	*/
 	static func findRepos(ignoredPaths: [String]) -> [String] {
 		var repoPaths = [String]()
-		os_log("Searching for Git repositories…")
+		logger.info("Searching for Git repositories…")
 
 		// Start building array of arguments for the `find` command
 		var command = "find $HOME"
@@ -59,7 +55,7 @@ class Git {
 		if status != 0 {
 			for errLine in splitLines(linesStr: stderr) {
 				if !errLine.hasSuffix("Operation not permitted") {
-					os_log("Error searching for Git repositories: %s", type: .error, errLine)
+					logger.error("Error searching for Git repositories: \(errLine)")
 				}
 			}
 		}
@@ -72,7 +68,7 @@ class Git {
 			String($0.dropLast(5)).replacingOccurrences(of: " ", with: "\\ ")
 		}
 
-		os_log("Found %d Git repositories", repoPaths.count)
+		logger.info("Found \(repoPaths.count) Git repositories")
 		return repoPaths
 	}
 }
