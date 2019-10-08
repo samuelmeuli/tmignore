@@ -8,5 +8,9 @@
 	<string>/usr/local/bin/tmignore</string>
 	<key>StartInterval</key>
 	<integer>86400</integer>
+	<key>StandardOutPath</key>
+	<string>/tmp/tmignore.out</string>
+	<key>StandardErrorPath</key>
+	<string>/tmp/tmignore.err</string>
 </dict>
 </plist>
