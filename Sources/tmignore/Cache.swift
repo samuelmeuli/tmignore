@@ -26,6 +26,17 @@ class Cache {
 	private lazy var cacheFilePath = cacheDirPath + "/cache.json"
 
 	/**
+		Deletes the cache directory
+	*/
+	func clear() {
+		do {
+			try FileManager.default.removeItem(atPath: cacheDirPath)
+		} catch {
+			logger.error("Could not delete cache directory: \(error.localizedDescription)")
+		}
+	}
+
+	/**
 		Parses the cache file (if it exists) and returns the cached exlusion paths
 	*/
 	func read() -> [String] {

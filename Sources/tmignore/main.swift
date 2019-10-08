@@ -68,7 +68,20 @@ class ResetCommand: Command {
 	let shortDescription = "Removes all created exclusions and clears the cache"
 
 	func execute() {
-		// TODO
+		let cache = Cache()
+
+		// Parse all previously added exclusions from the cache file and undo those exclusions
+		let cachedExclusions = cache.read()
+		logger.info("Removing \(cachedExclusions.count) backup exclusions…")
+		for path in cachedExclusions {
+			TimeMachine.removeExclusion(path: path)
+		}
+
+		// Delete the cache directory
+		logger.info("Deleting the cache…")
+		cache.clear()
+
+		logger.info("Finished reset")
 	}
 }
 
