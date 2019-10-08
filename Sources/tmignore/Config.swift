@@ -17,8 +17,10 @@ class Config {
 	var ignoredPaths = [
 		"~/.Trash",
 		"~/Applications",
+		"~/Downloads",
 		"~/Library",
 		"~/Music/iTunes",
+		"~/Music/Music",
 		"~/Pictures/Photos\\ Library.photoslibrary"
 	]
 
@@ -34,7 +36,7 @@ class Config {
 			do {
 				let json = try JSON(data: jsonData as Data)
 				logger.debug("Found config file at \(configPath)")
-				ignoredPaths += json["ignoredPaths"].arrayValue.map { $0.stringValue }
+				ignoredPaths = json["ignoredPaths"].arrayValue.map { $0.stringValue }
 				whitelist = json["whitelist"].arrayValue.map { $0.stringValue }
 			} catch {
 				logger.error("Could not parse config file: \(error.localizedDescription)")
