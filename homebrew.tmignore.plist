@@ -4,8 +4,11 @@
 <dict>
 	<key>Label</key>
 	<string>com.samuelmeuli.tmignore</string>
-	<key>Program</key>
-	<string>/usr/local/bin/tmignore</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/tmignore</string>
+		<string>run</string>
+	</array>
 	<key>StartInterval</key>
 	<integer>86400</integer>
 	<key>StandardOutPath</key>
