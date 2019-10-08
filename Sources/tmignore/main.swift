@@ -6,7 +6,7 @@ let logger = Logger(label: "com.samuelmeuli.tmignore")
 
 let cli = CLI(
 	name: "tmignore",
-	version: "0.2.0",
+	version: "1.0.0",
 	description: "Exclude development files from Time Machine backups"
 )
 
