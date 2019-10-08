@@ -14,7 +14,13 @@ Time Machine on macOS is a highly useful tool for creating backups of all your f
    brew install samuelmeuli/tap/tmignore
    ```
 
-2. Schedule the script to run once a day:
+2. If you want to run the script once:
+
+   ```sh
+   tmignore
+   ```
+
+   To schedule the script to run once a day:
 
    ```sh
    brew services start tmignore
