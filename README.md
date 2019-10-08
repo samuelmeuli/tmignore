@@ -1,10 +1,10 @@
-# `tmignore`
+# tmignore
 
 Time Machine on macOS is a highly useful tool for creating backups of all your files. Unfortunately for developers, it also backs up your coding project's dependencies, build output and other undesired files, which slows down the backup process and takes up storage.
 
 **`tmignore` excludes files and directories matched by `.gitignore` files from future Time Machine backups.**
 
-## Installation
+## Install
 
 **Requirements:** Homebrew and Xcode
 
@@ -17,7 +17,7 @@ Time Machine on macOS is a highly useful tool for creating backups of all your f
 2. If you want to run the script once:
 
    ```sh
-   tmignore
+   tmignore run
    ```
 
    To schedule the script to run once a day:
@@ -64,6 +64,14 @@ You can configure the behavior of `tmignore` by creating a configuration file at
     ]
   }
   ```
+
+## Uninstall
+
+To remove all backup exclusions that were made using `tmignore`, simply run the following command:
+
+```sh
+tmignore reset
+```
 
 ## Development
 
