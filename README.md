@@ -43,7 +43,7 @@ You can configure the behavior of `tmignore` by creating a configuration file at
   }
   ```
 
-- **`"ignorePaths"`:** You can also prevent `tmignore` from scanning certain folders for Git repositories:
+- **`"ignoredPaths"`:** You can also prevent `tmignore` from scanning certain folders for Git repositories:
 
   ```js
   {
