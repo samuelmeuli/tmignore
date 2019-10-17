@@ -40,14 +40,8 @@ func runCommand(command: String) -> (status: Int32, stdout: String?, stderr: Str
 	// Convert stdout and stderr to strings
 	let stdoutData = stdout.fileHandleForReading.readDataToEndOfFile()
 	let stderrData = stderr.fileHandleForReading.readDataToEndOfFile()
-	let stdoutStr: String = NSString(
-		data: stdoutData,
-		encoding: String.Encoding.utf8.rawValue
-		)! as String
-	let stderrStr: String = NSString(
-		data: stderrData,
-		encoding: String.Encoding.utf8.rawValue
-		)! as String
+	let stdoutStr = String(data: stdoutData, encoding: String.Encoding.utf8)
+	let stderrStr = String(data: stderrData, encoding: String.Encoding.utf8)
 
 	task.waitUntilExit()
 

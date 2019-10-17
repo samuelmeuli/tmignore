@@ -12,7 +12,7 @@ class Git {
 		logger.debug("Obtaining list of ignored files for repo at \(repoPath)…")
 		var ignoredFiles = [String]()
 
-		let command = "git -C \(repoPath) ls-files --directory --exclude-standard --ignored --others"
+		let command = "git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others"
 		let (status, stdout, stderr) = runCommand(command: command)
 
 		if status != 0 {
@@ -54,6 +54,7 @@ class Git {
 		let (status, stdout, stderr) = runCommand(command: command)
 		if status != 0 {
 			for errLine in splitLines(linesStr: stderr) {
+				// Ignore permission errors
 				if !errLine.hasSuffix("Operation not permitted") {
 					logger.error("Error searching for Git repositories: \(errLine)")
 				}
@@ -64,9 +65,7 @@ class Git {
 		let gitDirs = splitLines(linesStr: stdout)
 
 		// Build list of repositories (e.g. ["/path/to/repo"])
-		repoPaths = gitDirs.map {
-			String($0.dropLast(5)).replacingOccurrences(of: " ", with: "\\ ")
-		}
+		repoPaths = gitDirs.map { String($0.dropLast(5)) }
 
 		logger.info("Found \(repoPaths.count) Git repositories")
 		return repoPaths
