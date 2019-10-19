@@ -9,8 +9,13 @@
 		<string>/usr/local/bin/tmignore</string>
 		<string>run</string>
 	</array>
-	<key>StartInterval</key>
-	<integer>86400</integer>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>10</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
 	<key>StandardOutPath</key>
 	<string>/tmp/tmignore.out</string>
 	<key>StandardErrorPath</key>
