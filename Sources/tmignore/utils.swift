@@ -52,9 +52,9 @@ func runCommand(command: String) -> (status: Int32, stdout: String?, stderr: Str
 	Breaks up the provided (optional) string at newline characters and returns the lines as an array
 	of strings
 */
-func splitLines(linesStr: String?) -> [String] {
+func splitLines(linesStr: String?, lineSeparator: Character = "\n") -> [String] {
 	if let linesStrNotNil = linesStr {
-		return linesStrNotNil.split(separator: "\n").map { String($0) }
+		return linesStrNotNil.split(separator: lineSeparator).map { String($0) }
 	} else {
 		return [String]()
 	}

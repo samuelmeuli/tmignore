@@ -12,15 +12,26 @@ class Git {
 		logger.debug("Obtaining list of ignored files for repo at \(repoPath)…")
 		var ignoredFiles = [String]()
 
-		let command = "git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others"
-		let (status, stdout, stderr) = runCommand(command: command)
+		// Let Git list all ignored files/directories
+		// "-C [repoPath]": Directory to run the command in
+		// "--directory": If entire directory is ignored, only list its name (instead of all
+		// contained files)
+		// "--exclude-standard": Also use `.git/info/exclude` and the global `.gitignore` file
+		// "--ignored": List ignored files
+		// "--others": Include untracked files
+		// "-z": Do not encode "unusual" characters (e.g. "ä" is normally listed as "\303\244")
+		let (status, stdout, stderr) = runCommand(
+			command: "git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others -z"
+		)
 
 		if status != 0 {
 			logger.error(
 				"Error obtaining list of ignored files for repository at path \(repoPath): \(stderr ?? "")"
 			)
 		} else {
-			let ignoredFilesRel = splitLines(linesStr: stdout)
+			// Split lines at NUL bytes (output by Git instead of newline characters because of the
+			// "-z" flag)
+			let ignoredFilesRel = splitLines(linesStr: stdout, lineSeparator: "\0")
 			ignoredFiles = ignoredFilesRel.map { "\(repoPath)/\($0)" }
 		}
 
