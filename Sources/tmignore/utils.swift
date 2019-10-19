@@ -25,27 +25,31 @@ func pathMatchesGlob(glob: String, path: String) -> Bool {
 /**
 	Executes the provided shell command, then parses and returns its status and output
 */
-func runCommand(command: String) -> (status: Int32, stdout: String?, stderr: String?) {
+func runCommand(_ command: String) -> (status: Int32, stdout: String?, stderr: String?) {
 	let task = Process()
-	task.launchPath = "/bin/bash"
+	task.executableURL = URL(fileURLWithPath: "/bin/bash")
 	task.arguments = ["-c", command]
 
-	let stdout = Pipe()
-	let stderr = Pipe()
-	task.standardOutput = stdout
-	task.standardError = stderr
+	let outPipe = Pipe()
+	let errPipe = Pipe()
+	task.standardOutput = outPipe
+	task.standardError = errPipe
 
-	task.launch()
+	do {
+		try task.run()
+	} catch {
+		return (status: -1, stdout: nil, stderr: error.localizedDescription)
+	}
 
 	// Convert stdout and stderr to strings
-	let stdoutData = stdout.fileHandleForReading.readDataToEndOfFile()
-	let stderrData = stderr.fileHandleForReading.readDataToEndOfFile()
-	let stdoutStr = String(data: stdoutData, encoding: String.Encoding.utf8)
-	let stderrStr = String(data: stderrData, encoding: String.Encoding.utf8)
+	let outData = outPipe.fileHandleForReading.readDataToEndOfFile()
+	let errData = errPipe.fileHandleForReading.readDataToEndOfFile()
+	let outStr = String(data: outData, encoding: .utf8)
+	let errStr = String(data: errData, encoding: .utf8)
 
 	task.waitUntilExit()
 
-	return (status: task.terminationStatus, stdout: stdoutStr, stderr: stderrStr)
+	return (status: task.terminationStatus, stdout: outStr, stderr: errStr)
 }
 
 /**

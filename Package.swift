@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
 	name: "tmignore",
 	platforms: [
-		.macOS(.v10_12)
+		.macOS(.v10_13)
 	],
 	dependencies: [
 		.package(

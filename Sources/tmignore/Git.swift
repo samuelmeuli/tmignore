@@ -21,7 +21,7 @@ class Git {
 		// "--others": Include untracked files
 		// "-z": Do not encode "unusual" characters (e.g. "ä" is normally listed as "\303\244")
 		let (status, stdout, stderr) = runCommand(
-			command: "git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others -z"
+			"git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others -z"
 		)
 
 		if status != 0 {
@@ -62,7 +62,7 @@ class Git {
 		command += " -type d -name .git -print"
 
 		// Run the `find` command
-		let (status, stdout, stderr) = runCommand(command: command)
+		let (status, stdout, stderr) = runCommand(command)
 		if status != 0 {
 			for errLine in splitLines(linesStr: stderr) {
 				// Ignore permission errors

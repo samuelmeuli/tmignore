@@ -6,7 +6,7 @@ Time Machine on macOS is a highly useful tool for creating backups of all your f
 
 ## Install
 
-**Requirements:** Homebrew and Xcode
+**Requirements:** macOS 10.13 or newer, Homebrew, Xcode
 
 1. Build and install the script using Homebrew:
 
