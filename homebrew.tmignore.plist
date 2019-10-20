@@ -17,8 +17,8 @@
 		<integer>0</integer>
 	</dict>
 	<key>StandardOutPath</key>
-	<string>/tmp/tmignore.out</string>
+	<string>/tmp/tmignore-out.log</string>
 	<key>StandardErrorPath</key>
-	<string>/tmp/tmignore.err</string>
+	<string>/tmp/tmignore-err.log</string>
 </dict>
 </plist>
