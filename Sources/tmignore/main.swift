@@ -1,8 +1,7 @@
 import Foundation
-import Logging
 import SwiftCLI
 
-let logger = Logger(label: "com.samuelmeuli.tmignore")
+let logger = createLogger()
 
 let cli = CLI(
 	name: "tmignore",

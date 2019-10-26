@@ -7,63 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_104 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Package.swift */; };
-		OBJ_110 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SwiftyJSON.swift */; };
-		OBJ_117 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Package.swift */; };
-		OBJ_123 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Package.swift */; };
-		OBJ_129 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Cache.swift */; };
-		OBJ_130 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Config.swift */; };
-		OBJ_131 /* Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Git.swift */; };
-		OBJ_132 /* TimeMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* TimeMachine.swift */; };
-		OBJ_133 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* main.swift */; };
-		OBJ_134 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* utils.swift */; };
-		OBJ_136 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */; };
-		OBJ_137 /* SwiftCLI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCLI::SwiftCLI::Product" /* SwiftCLI.framework */; };
-		OBJ_138 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-log::Logging::Product" /* Logging.framework */; };
-		OBJ_147 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_67 /* Locks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Locks.swift */; };
-		OBJ_68 /* LogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* LogHandler.swift */; };
-		OBJ_69 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Logging.swift */; };
-		OBJ_76 /* ArgumentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ArgumentList.swift */; };
-		OBJ_77 /* ArgumentListManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ArgumentListManipulator.swift */; };
-		OBJ_78 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* CLI.swift */; };
-		OBJ_79 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Command.swift */; };
-		OBJ_80 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Compatibility.swift */; };
-		OBJ_81 /* CompletionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* CompletionGenerator.swift */; };
-		OBJ_82 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Error.swift */; };
-		OBJ_83 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* HelpCommand.swift */; };
-		OBJ_84 /* HelpMessageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* HelpMessageGenerator.swift */; };
-		OBJ_85 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Input.swift */; };
-		OBJ_86 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Option.swift */; };
-		OBJ_87 /* OptionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* OptionGroup.swift */; };
-		OBJ_88 /* OptionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* OptionRegistry.swift */; };
-		OBJ_89 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Parameter.swift */; };
-		OBJ_90 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Parser.swift */; };
-		OBJ_91 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Path.swift */; };
-		OBJ_92 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Stream.swift */; };
-		OBJ_93 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Task.swift */; };
-		OBJ_94 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Term.swift */; };
-		OBJ_95 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Validation.swift */; };
-		OBJ_96 /* ValueBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* ValueBox.swift */; };
-		OBJ_97 /* VersionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* VersionCommand.swift */; };
+		7E8AD82D2364C62F00017948 /* logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8AD82B2364C60700017948 /* logging.swift */; };
+		OBJ_101 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-log::Logging::Product" /* Logging.framework */; };
+		OBJ_108 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Package.swift */; };
+		OBJ_113 /* Locks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Locks.swift */; };
+		OBJ_114 /* LogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* LogHandler.swift */; };
+		OBJ_115 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Logging.swift */; };
+		OBJ_122 /* ArgumentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* ArgumentList.swift */; };
+		OBJ_123 /* ArgumentListManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ArgumentListManipulator.swift */; };
+		OBJ_124 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* CLI.swift */; };
+		OBJ_125 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Command.swift */; };
+		OBJ_126 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Compatibility.swift */; };
+		OBJ_127 /* CompletionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* CompletionGenerator.swift */; };
+		OBJ_128 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Error.swift */; };
+		OBJ_129 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* HelpCommand.swift */; };
+		OBJ_130 /* HelpMessageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* HelpMessageGenerator.swift */; };
+		OBJ_131 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Input.swift */; };
+		OBJ_132 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Option.swift */; };
+		OBJ_133 /* OptionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* OptionGroup.swift */; };
+		OBJ_134 /* OptionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* OptionRegistry.swift */; };
+		OBJ_135 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Parameter.swift */; };
+		OBJ_136 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Parser.swift */; };
+		OBJ_137 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Path.swift */; };
+		OBJ_138 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Stream.swift */; };
+		OBJ_139 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Task.swift */; };
+		OBJ_140 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Term.swift */; };
+		OBJ_141 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Validation.swift */; };
+		OBJ_142 /* ValueBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* ValueBox.swift */; };
+		OBJ_143 /* VersionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* VersionCommand.swift */; };
+		OBJ_150 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Package.swift */; };
+		OBJ_156 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SwiftyJSON.swift */; };
+		OBJ_163 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Package.swift */; };
+		OBJ_169 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Package.swift */; };
+		OBJ_175 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Cache.swift */; };
+		OBJ_176 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Config.swift */; };
+		OBJ_177 /* Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Git.swift */; };
+		OBJ_178 /* TimeMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* TimeMachine.swift */; };
+		OBJ_179 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* main.swift */; };
+		OBJ_180 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* utils.swift */; };
+		OBJ_182 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */; };
+		OBJ_183 /* SwiftCLI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCLI::SwiftCLI::Product" /* SwiftCLI.framework */; };
+		OBJ_184 /* HeliumLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HeliumLogger::HeliumLogger::Product" /* HeliumLogger.framework */; };
+		OBJ_185 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */; };
+		OBJ_186 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-log::Logging::Product" /* Logging.framework */; };
+		OBJ_197 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_79 /* HeliumLogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* HeliumLogHandler.swift */; };
+		OBJ_80 /* HeliumLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* HeliumLogger.swift */; };
+		OBJ_81 /* HeliumStreamLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* HeliumStreamLogger.swift */; };
+		OBJ_83 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */; };
+		OBJ_84 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-log::Logging::Product" /* Logging.framework */; };
+		OBJ_94 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Package.swift */; };
+		OBJ_99 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7ECD2BB3234D04C500A6C307 /* PBXContainerItemProxy */ = {
+		7E8AD8202364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftyJSON::SwiftyJSON";
 			remoteInfo = SwiftyJSON;
 		};
-		7ECD2BB4234D04C500A6C307 /* PBXContainerItemProxy */ = {
+		7E8AD8212364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCLI::SwiftCLI";
 			remoteInfo = SwiftCLI;
 		};
-		7ECD2BB5234D04C500A6C307 /* PBXContainerItemProxy */ = {
+		7E8AD8222364C19700017948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "HeliumLogger::HeliumLogger";
+			remoteInfo = HeliumLogger;
+		};
+		7E8AD8232364C19700017948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteInfo = LoggerAPI;
+		};
+		7E8AD8242364C19700017948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "swift-log::Logging";
+			remoteInfo = Logging;
+		};
+		7E8AD8252364C19700017948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "swift-log::Logging";
+			remoteInfo = Logging;
+		};
+		7E8AD8262364C19700017948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteInfo = LoggerAPI;
+		};
+		7E8AD8272364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -73,6 +120,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E8AD82B2364C60700017948 /* logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logging.swift; sourceTree = "<group>"; };
+		"HeliumLogger::HeliumLogger::Product" /* HeliumLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HeliumLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoggerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Git.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git.swift; sourceTree = "<group>"; };
 		OBJ_12 /* TimeMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMachine.swift; sourceTree = "<group>"; };
@@ -80,39 +130,45 @@
 		OBJ_14 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		OBJ_19 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		OBJ_20 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/samuel/projects/maintained/tmignore/.build/checkouts/SwiftyJSON/Package.swift; sourceTree = "<group>"; };
-		OBJ_23 /* Locks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locks.swift; sourceTree = "<group>"; };
-		OBJ_24 /* LogHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHandler.swift; sourceTree = "<group>"; };
-		OBJ_25 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
-		OBJ_26 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/samuel/projects/maintained/tmignore/.build/checkouts/swift-log/Package.swift"; sourceTree = "<group>"; };
-		OBJ_29 /* ArgumentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentList.swift; sourceTree = "<group>"; };
-		OBJ_30 /* ArgumentListManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentListManipulator.swift; sourceTree = "<group>"; };
-		OBJ_31 /* CLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
-		OBJ_32 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		OBJ_33 /* Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatibility.swift; sourceTree = "<group>"; };
-		OBJ_34 /* CompletionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionGenerator.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		OBJ_36 /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
-		OBJ_37 /* HelpMessageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMessageGenerator.swift; sourceTree = "<group>"; };
-		OBJ_38 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
-		OBJ_39 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
-		OBJ_40 /* OptionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionGroup.swift; sourceTree = "<group>"; };
-		OBJ_41 /* OptionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRegistry.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
-		OBJ_43 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		OBJ_44 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		OBJ_45 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
-		OBJ_46 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		OBJ_47 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
-		OBJ_48 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		OBJ_49 /* ValueBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueBox.swift; sourceTree = "<group>"; };
-		OBJ_50 /* VersionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCommand.swift; sourceTree = "<group>"; };
-		OBJ_51 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/samuel/projects/maintained/tmignore/.build/checkouts/SwiftCLI/Package.swift; sourceTree = "<group>"; };
-		OBJ_57 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dist; sourceTree = SOURCE_ROOT; };
-		OBJ_58 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		OBJ_59 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		OBJ_23 /* ArgumentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentList.swift; sourceTree = "<group>"; };
+		OBJ_24 /* ArgumentListManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentListManipulator.swift; sourceTree = "<group>"; };
+		OBJ_25 /* CLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatibility.swift; sourceTree = "<group>"; };
+		OBJ_28 /* CompletionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionGenerator.swift; sourceTree = "<group>"; };
+		OBJ_29 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_30 /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
+		OBJ_31 /* HelpMessageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMessageGenerator.swift; sourceTree = "<group>"; };
+		OBJ_32 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		OBJ_34 /* OptionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionGroup.swift; sourceTree = "<group>"; };
+		OBJ_35 /* OptionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRegistry.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		OBJ_37 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		OBJ_41 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		OBJ_43 /* ValueBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueBox.swift; sourceTree = "<group>"; };
+		OBJ_44 /* VersionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCommand.swift; sourceTree = "<group>"; };
+		OBJ_45 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/samuel/projects/maintained/tmignore/.build/checkouts/SwiftCLI/Package.swift; sourceTree = "<group>"; };
+		OBJ_48 /* HeliumLogHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliumLogHandler.swift; sourceTree = "<group>"; };
+		OBJ_49 /* HeliumLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliumLogger.swift; sourceTree = "<group>"; };
+		OBJ_50 /* HeliumStreamLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliumStreamLogger.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/samuel/projects/maintained/tmignore/.build/checkouts/HeliumLogger/Package.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/samuel/projects/maintained/tmignore/.build/checkouts/LoggerAPI/Package.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Locks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locks.swift; sourceTree = "<group>"; };
+		OBJ_59 /* LogHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHandler.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* homebrew.tmignore.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = homebrew.tmignore.plist; sourceTree = "<group>"; };
-		OBJ_61 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_60 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		OBJ_61 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/samuel/projects/maintained/tmignore/.build/checkouts/swift-log/Package.swift"; sourceTree = "<group>"; };
+		OBJ_69 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dist; sourceTree = SOURCE_ROOT; };
+		OBJ_70 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		OBJ_71 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		OBJ_72 /* homebrew.tmignore.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = homebrew.tmignore.plist; sourceTree = "<group>"; };
+		OBJ_73 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_9 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		"SwiftCLI::SwiftCLI::Product" /* SwiftCLI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftCLI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,34 +177,53 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_111 /* Frameworks */ = {
+		OBJ_100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_101 /* Logging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_116 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_135 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_136 /* SwiftyJSON.framework in Frameworks */,
-				OBJ_137 /* SwiftCLI.framework in Frameworks */,
-				OBJ_138 /* Logging.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_70 /* Frameworks */ = {
+		OBJ_144 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_98 /* Frameworks */ = {
+		OBJ_157 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_182 /* SwiftyJSON.framework in Frameworks */,
+				OBJ_183 /* SwiftCLI.framework in Frameworks */,
+				OBJ_184 /* HeliumLogger.framework in Frameworks */,
+				OBJ_185 /* LoggerAPI.framework in Frameworks */,
+				OBJ_186 /* Logging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_83 /* LoggerAPI.framework in Frameworks */,
+				OBJ_84 /* Logging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,8 +241,10 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_17 /* SwiftyJSON 5.0.0 */,
-				OBJ_21 /* swift-log 1.1.1 */,
-				OBJ_27 /* SwiftCLI 5.3.2 */,
+				OBJ_21 /* SwiftCLI 5.3.3 */,
+				OBJ_46 /* HeliumLogger 1.9.0 */,
+				OBJ_52 /* LoggerAPI 1.9.0 */,
+				OBJ_56 /* swift-log 1.1.1 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -190,88 +267,129 @@
 			path = .build/checkouts/SwiftyJSON/Source/SwiftyJSON;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_21 /* swift-log 1.1.1 */ = {
+		OBJ_21 /* SwiftCLI 5.3.3 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* Logging */,
-				OBJ_26 /* Package.swift */,
+				OBJ_22 /* SwiftCLI */,
+				OBJ_45 /* Package.swift */,
 			);
-			name = "swift-log 1.1.1";
+			name = "SwiftCLI 5.3.3";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_22 /* Logging */ = {
+		OBJ_22 /* SwiftCLI */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_23 /* Locks.swift */,
-				OBJ_24 /* LogHandler.swift */,
-				OBJ_25 /* Logging.swift */,
-			);
-			name = Logging;
-			path = ".build/checkouts/swift-log/Sources/Logging";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_27 /* SwiftCLI 5.3.2 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_28 /* SwiftCLI */,
-				OBJ_51 /* Package.swift */,
-			);
-			name = "SwiftCLI 5.3.2";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_28 /* SwiftCLI */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_29 /* ArgumentList.swift */,
-				OBJ_30 /* ArgumentListManipulator.swift */,
-				OBJ_31 /* CLI.swift */,
-				OBJ_32 /* Command.swift */,
-				OBJ_33 /* Compatibility.swift */,
-				OBJ_34 /* CompletionGenerator.swift */,
-				OBJ_35 /* Error.swift */,
-				OBJ_36 /* HelpCommand.swift */,
-				OBJ_37 /* HelpMessageGenerator.swift */,
-				OBJ_38 /* Input.swift */,
-				OBJ_39 /* Option.swift */,
-				OBJ_40 /* OptionGroup.swift */,
-				OBJ_41 /* OptionRegistry.swift */,
-				OBJ_42 /* Parameter.swift */,
-				OBJ_43 /* Parser.swift */,
-				OBJ_44 /* Path.swift */,
-				OBJ_45 /* Stream.swift */,
-				OBJ_46 /* Task.swift */,
-				OBJ_47 /* Term.swift */,
-				OBJ_48 /* Validation.swift */,
-				OBJ_49 /* ValueBox.swift */,
-				OBJ_50 /* VersionCommand.swift */,
+				OBJ_23 /* ArgumentList.swift */,
+				OBJ_24 /* ArgumentListManipulator.swift */,
+				OBJ_25 /* CLI.swift */,
+				OBJ_26 /* Command.swift */,
+				OBJ_27 /* Compatibility.swift */,
+				OBJ_28 /* CompletionGenerator.swift */,
+				OBJ_29 /* Error.swift */,
+				OBJ_30 /* HelpCommand.swift */,
+				OBJ_31 /* HelpMessageGenerator.swift */,
+				OBJ_32 /* Input.swift */,
+				OBJ_33 /* Option.swift */,
+				OBJ_34 /* OptionGroup.swift */,
+				OBJ_35 /* OptionRegistry.swift */,
+				OBJ_36 /* Parameter.swift */,
+				OBJ_37 /* Parser.swift */,
+				OBJ_38 /* Path.swift */,
+				OBJ_39 /* Stream.swift */,
+				OBJ_40 /* Task.swift */,
+				OBJ_41 /* Term.swift */,
+				OBJ_42 /* Validation.swift */,
+				OBJ_43 /* ValueBox.swift */,
+				OBJ_44 /* VersionCommand.swift */,
 			);
 			name = SwiftCLI;
 			path = .build/checkouts/SwiftCLI/Sources/SwiftCLI;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 = {
+		OBJ_46 /* HeliumLogger 1.9.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_47 /* HeliumLogger */,
+				OBJ_51 /* Package.swift */,
+			);
+			name = "HeliumLogger 1.9.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_47 /* HeliumLogger */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_48 /* HeliumLogHandler.swift */,
+				OBJ_49 /* HeliumLogger.swift */,
+				OBJ_50 /* HeliumStreamLogger.swift */,
+			);
+			name = HeliumLogger;
+			path = .build/checkouts/HeliumLogger/Sources/HeliumLogger;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_15 /* Tests */,
 				OBJ_16 /* Dependencies */,
-				OBJ_52 /* Products */,
-				OBJ_57 /* dist */,
-				OBJ_58 /* LICENSE.md */,
-				OBJ_59 /* Makefile */,
-				OBJ_60 /* homebrew.tmignore.plist */,
-				OBJ_61 /* README.md */,
+				OBJ_62 /* Products */,
+				OBJ_69 /* dist */,
+				OBJ_70 /* LICENSE.md */,
+				OBJ_71 /* Makefile */,
+				OBJ_72 /* homebrew.tmignore.plist */,
+				OBJ_73 /* README.md */,
 			);
+			name = "";
 			sourceTree = "<group>";
 		};
-		OBJ_52 /* Products */ = {
+		OBJ_52 /* LoggerAPI 1.9.0 */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_53 /* LoggerAPI */,
+				OBJ_55 /* Package.swift */,
+			);
+			name = "LoggerAPI 1.9.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_53 /* LoggerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_54 /* Logger.swift */,
+			);
+			name = LoggerAPI;
+			path = .build/checkouts/LoggerAPI/Sources/LoggerAPI;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_56 /* swift-log 1.1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_57 /* Logging */,
+				OBJ_61 /* Package.swift */,
+			);
+			name = "swift-log 1.1.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_57 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_58 /* Locks.swift */,
+				OBJ_59 /* LogHandler.swift */,
+				OBJ_60 /* Logging.swift */,
+			);
+			name = Logging;
+			path = ".build/checkouts/swift-log/Sources/Logging";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"HeliumLogger::HeliumLogger::Product" /* HeliumLogger.framework */,
+				"swift-log::Logging::Product" /* Logging.framework */,
+				"SwiftCLI::SwiftCLI::Product" /* SwiftCLI.framework */,
 				"tmignore::tmignore::Product" /* tmignore */,
 				"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */,
-				"SwiftCLI::SwiftCLI::Product" /* SwiftCLI.framework */,
-				"swift-log::Logging::Product" /* Logging.framework */,
+				"LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -290,6 +408,7 @@
 				OBJ_9 /* Cache.swift */,
 				OBJ_10 /* Config.swift */,
 				OBJ_11 /* Git.swift */,
+				7E8AD82B2364C60700017948 /* logging.swift */,
 				OBJ_12 /* TimeMachine.swift */,
 				OBJ_13 /* main.swift */,
 				OBJ_14 /* utils.swift */,
@@ -301,12 +420,75 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		"HeliumLogger::HeliumLogger" /* HeliumLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_75 /* Build configuration list for PBXNativeTarget "HeliumLogger" */;
+			buildPhases = (
+				OBJ_78 /* Sources */,
+				OBJ_82 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_85 /* PBXTargetDependency */,
+				OBJ_87 /* PBXTargetDependency */,
+			);
+			name = HeliumLogger;
+			productName = HeliumLogger;
+			productReference = "HeliumLogger::HeliumLogger::Product" /* HeliumLogger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"HeliumLogger::SwiftPMPackageDescription" /* HeliumLoggerPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_90 /* Build configuration list for PBXNativeTarget "HeliumLoggerPackageDescription" */;
+			buildPhases = (
+				OBJ_93 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeliumLoggerPackageDescription;
+			productName = HeliumLoggerPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"LoggerAPI::LoggerAPI" /* LoggerAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_95 /* Build configuration list for PBXNativeTarget "LoggerAPI" */;
+			buildPhases = (
+				OBJ_98 /* Sources */,
+				OBJ_100 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_102 /* PBXTargetDependency */,
+			);
+			name = LoggerAPI;
+			productName = LoggerAPI;
+			productReference = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"LoggerAPI::SwiftPMPackageDescription" /* LoggerAPIPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_104 /* Build configuration list for PBXNativeTarget "LoggerAPIPackageDescription" */;
+			buildPhases = (
+				OBJ_107 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoggerAPIPackageDescription;
+			productName = LoggerAPIPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
 		"SwiftCLI::SwiftCLI" /* SwiftCLI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_72 /* Build configuration list for PBXNativeTarget "SwiftCLI" */;
+			buildConfigurationList = OBJ_118 /* Build configuration list for PBXNativeTarget "SwiftCLI" */;
 			buildPhases = (
-				OBJ_75 /* Sources */,
-				OBJ_98 /* Frameworks */,
+				OBJ_121 /* Sources */,
+				OBJ_144 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,9 +501,9 @@
 		};
 		"SwiftCLI::SwiftPMPackageDescription" /* SwiftCLIPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_100 /* Build configuration list for PBXNativeTarget "SwiftCLIPackageDescription" */;
+			buildConfigurationList = OBJ_146 /* Build configuration list for PBXNativeTarget "SwiftCLIPackageDescription" */;
 			buildPhases = (
-				OBJ_103 /* Sources */,
+				OBJ_149 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -333,9 +515,9 @@
 		};
 		"SwiftyJSON::SwiftPMPackageDescription" /* SwiftyJSONPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_113 /* Build configuration list for PBXNativeTarget "SwiftyJSONPackageDescription" */;
+			buildConfigurationList = OBJ_159 /* Build configuration list for PBXNativeTarget "SwiftyJSONPackageDescription" */;
 			buildPhases = (
-				OBJ_116 /* Sources */,
+				OBJ_162 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -347,10 +529,10 @@
 		};
 		"SwiftyJSON::SwiftyJSON" /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_106 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = OBJ_152 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				OBJ_109 /* Sources */,
-				OBJ_111 /* Frameworks */,
+				OBJ_155 /* Sources */,
+				OBJ_157 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -363,10 +545,10 @@
 		};
 		"swift-log::Logging" /* Logging */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_63 /* Build configuration list for PBXNativeTarget "Logging" */;
+			buildConfigurationList = OBJ_109 /* Build configuration list for PBXNativeTarget "Logging" */;
 			buildPhases = (
-				OBJ_66 /* Sources */,
-				OBJ_70 /* Frameworks */,
+				OBJ_112 /* Sources */,
+				OBJ_116 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,9 +561,9 @@
 		};
 		"swift-log::SwiftPMPackageDescription" /* swift-logPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_119 /* Build configuration list for PBXNativeTarget "swift-logPackageDescription" */;
+			buildConfigurationList = OBJ_165 /* Build configuration list for PBXNativeTarget "swift-logPackageDescription" */;
 			buildPhases = (
-				OBJ_122 /* Sources */,
+				OBJ_168 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -393,9 +575,9 @@
 		};
 		"tmignore::SwiftPMPackageDescription" /* tmignorePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_143 /* Build configuration list for PBXNativeTarget "tmignorePackageDescription" */;
+			buildConfigurationList = OBJ_193 /* Build configuration list for PBXNativeTarget "tmignorePackageDescription" */;
 			buildPhases = (
-				OBJ_146 /* Sources */,
+				OBJ_196 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -407,18 +589,20 @@
 		};
 		"tmignore::tmignore" /* tmignore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_125 /* Build configuration list for PBXNativeTarget "tmignore" */;
+			buildConfigurationList = OBJ_171 /* Build configuration list for PBXNativeTarget "tmignore" */;
 			buildPhases = (
-				OBJ_128 /* Sources */,
-				OBJ_135 /* Frameworks */,
-				7ECD2BB6234D04D600A6C307 /* SwiftLint */,
+				OBJ_174 /* Sources */,
+				OBJ_181 /* Frameworks */,
+				7E8AD82E2364C74D00017948 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_139 /* PBXTargetDependency */,
-				OBJ_140 /* PBXTargetDependency */,
-				OBJ_141 /* PBXTargetDependency */,
+				OBJ_187 /* PBXTargetDependency */,
+				OBJ_188 /* PBXTargetDependency */,
+				OBJ_189 /* PBXTargetDependency */,
+				OBJ_190 /* PBXTargetDependency */,
+				OBJ_191 /* PBXTargetDependency */,
 			);
 			name = tmignore;
 			productName = tmignore;
@@ -441,11 +625,15 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_52 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				"HeliumLogger::HeliumLogger" /* HeliumLogger */,
+				"HeliumLogger::SwiftPMPackageDescription" /* HeliumLoggerPackageDescription */,
+				"LoggerAPI::LoggerAPI" /* LoggerAPI */,
+				"LoggerAPI::SwiftPMPackageDescription" /* LoggerAPIPackageDescription */,
 				"swift-log::Logging" /* Logging */,
 				"SwiftCLI::SwiftCLI" /* SwiftCLI */,
 				"SwiftCLI::SwiftPMPackageDescription" /* SwiftCLIPackageDescription */,
@@ -459,7 +647,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7ECD2BB6234D04D600A6C307 /* SwiftLint */ = {
+		7E8AD82E2364C74D00017948 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,120 +668,296 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_103 /* Sources */ = {
+		OBJ_107 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_104 /* Package.swift in Sources */,
+				OBJ_108 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_109 /* Sources */ = {
+		OBJ_112 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_110 /* SwiftyJSON.swift in Sources */,
+				OBJ_113 /* Locks.swift in Sources */,
+				OBJ_114 /* LogHandler.swift in Sources */,
+				OBJ_115 /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_116 /* Sources */ = {
+		OBJ_121 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_117 /* Package.swift in Sources */,
+				OBJ_122 /* ArgumentList.swift in Sources */,
+				OBJ_123 /* ArgumentListManipulator.swift in Sources */,
+				OBJ_124 /* CLI.swift in Sources */,
+				OBJ_125 /* Command.swift in Sources */,
+				OBJ_126 /* Compatibility.swift in Sources */,
+				OBJ_127 /* CompletionGenerator.swift in Sources */,
+				OBJ_128 /* Error.swift in Sources */,
+				OBJ_129 /* HelpCommand.swift in Sources */,
+				OBJ_130 /* HelpMessageGenerator.swift in Sources */,
+				OBJ_131 /* Input.swift in Sources */,
+				OBJ_132 /* Option.swift in Sources */,
+				OBJ_133 /* OptionGroup.swift in Sources */,
+				OBJ_134 /* OptionRegistry.swift in Sources */,
+				OBJ_135 /* Parameter.swift in Sources */,
+				OBJ_136 /* Parser.swift in Sources */,
+				OBJ_137 /* Path.swift in Sources */,
+				OBJ_138 /* Stream.swift in Sources */,
+				OBJ_139 /* Task.swift in Sources */,
+				OBJ_140 /* Term.swift in Sources */,
+				OBJ_141 /* Validation.swift in Sources */,
+				OBJ_142 /* ValueBox.swift in Sources */,
+				OBJ_143 /* VersionCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_122 /* Sources */ = {
+		OBJ_149 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_123 /* Package.swift in Sources */,
+				OBJ_150 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_128 /* Sources */ = {
+		OBJ_155 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_129 /* Cache.swift in Sources */,
-				OBJ_130 /* Config.swift in Sources */,
-				OBJ_131 /* Git.swift in Sources */,
-				OBJ_132 /* TimeMachine.swift in Sources */,
-				OBJ_133 /* main.swift in Sources */,
-				OBJ_134 /* utils.swift in Sources */,
+				OBJ_156 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_146 /* Sources */ = {
+		OBJ_162 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_147 /* Package.swift in Sources */,
+				OBJ_163 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_66 /* Sources */ = {
+		OBJ_168 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_67 /* Locks.swift in Sources */,
-				OBJ_68 /* LogHandler.swift in Sources */,
-				OBJ_69 /* Logging.swift in Sources */,
+				OBJ_169 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_75 /* Sources */ = {
+		OBJ_174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_76 /* ArgumentList.swift in Sources */,
-				OBJ_77 /* ArgumentListManipulator.swift in Sources */,
-				OBJ_78 /* CLI.swift in Sources */,
-				OBJ_79 /* Command.swift in Sources */,
-				OBJ_80 /* Compatibility.swift in Sources */,
-				OBJ_81 /* CompletionGenerator.swift in Sources */,
-				OBJ_82 /* Error.swift in Sources */,
-				OBJ_83 /* HelpCommand.swift in Sources */,
-				OBJ_84 /* HelpMessageGenerator.swift in Sources */,
-				OBJ_85 /* Input.swift in Sources */,
-				OBJ_86 /* Option.swift in Sources */,
-				OBJ_87 /* OptionGroup.swift in Sources */,
-				OBJ_88 /* OptionRegistry.swift in Sources */,
-				OBJ_89 /* Parameter.swift in Sources */,
-				OBJ_90 /* Parser.swift in Sources */,
-				OBJ_91 /* Path.swift in Sources */,
-				OBJ_92 /* Stream.swift in Sources */,
-				OBJ_93 /* Task.swift in Sources */,
-				OBJ_94 /* Term.swift in Sources */,
-				OBJ_95 /* Validation.swift in Sources */,
-				OBJ_96 /* ValueBox.swift in Sources */,
-				OBJ_97 /* VersionCommand.swift in Sources */,
+				OBJ_175 /* Cache.swift in Sources */,
+				OBJ_176 /* Config.swift in Sources */,
+				7E8AD82D2364C62F00017948 /* logging.swift in Sources */,
+				OBJ_177 /* Git.swift in Sources */,
+				OBJ_178 /* TimeMachine.swift in Sources */,
+				OBJ_179 /* main.swift in Sources */,
+				OBJ_180 /* utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_196 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_197 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_79 /* HeliumLogHandler.swift in Sources */,
+				OBJ_80 /* HeliumLogger.swift in Sources */,
+				OBJ_81 /* HeliumStreamLogger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_94 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_99 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_139 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwiftyJSON::SwiftyJSON" /* SwiftyJSON */;
-			targetProxy = 7ECD2BB3234D04C500A6C307 /* PBXContainerItemProxy */;
-		};
-		OBJ_140 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwiftCLI::SwiftCLI" /* SwiftCLI */;
-			targetProxy = 7ECD2BB4234D04C500A6C307 /* PBXContainerItemProxy */;
-		};
-		OBJ_141 /* PBXTargetDependency */ = {
+		OBJ_102 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "swift-log::Logging" /* Logging */;
-			targetProxy = 7ECD2BB5234D04C500A6C307 /* PBXContainerItemProxy */;
+			targetProxy = 7E8AD8242364C19700017948 /* PBXContainerItemProxy */;
+		};
+		OBJ_187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftyJSON::SwiftyJSON" /* SwiftyJSON */;
+			targetProxy = 7E8AD8202364C19700017948 /* PBXContainerItemProxy */;
+		};
+		OBJ_188 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftCLI::SwiftCLI" /* SwiftCLI */;
+			targetProxy = 7E8AD8212364C19700017948 /* PBXContainerItemProxy */;
+		};
+		OBJ_189 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "HeliumLogger::HeliumLogger" /* HeliumLogger */;
+			targetProxy = 7E8AD8222364C19700017948 /* PBXContainerItemProxy */;
+		};
+		OBJ_190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "LoggerAPI::LoggerAPI" /* LoggerAPI */;
+			targetProxy = 7E8AD8262364C19700017948 /* PBXContainerItemProxy */;
+		};
+		OBJ_191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "swift-log::Logging" /* Logging */;
+			targetProxy = 7E8AD8272364C19700017948 /* PBXContainerItemProxy */;
+		};
+		OBJ_85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "LoggerAPI::LoggerAPI" /* LoggerAPI */;
+			targetProxy = 7E8AD8232364C19700017948 /* PBXContainerItemProxy */;
+		};
+		OBJ_87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "swift-log::Logging" /* Logging */;
+			targetProxy = 7E8AD8252364C19700017948 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_101 /* Debug */ = {
+		OBJ_105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = tmignore.xcodeproj/Logging_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Logging;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Logging;
+			};
+			name = Debug;
+		};
+		OBJ_111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = tmignore.xcodeproj/Logging_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Logging;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Logging;
+			};
+			name = Release;
+		};
+		OBJ_119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = tmignore.xcodeproj/SwiftCLI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCLI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftCLI;
+			};
+			name = Debug;
+		};
+		OBJ_120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = tmignore.xcodeproj/SwiftCLI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCLI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftCLI;
+			};
+			name = Release;
+		};
+		OBJ_147 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -602,7 +966,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_102 /* Release */ = {
+		OBJ_148 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -611,7 +975,7 @@
 			};
 			name = Release;
 		};
-		OBJ_107 /* Debug */ = {
+		OBJ_153 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -621,8 +985,8 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tmignore.xcodeproj/SwiftyJSON_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -633,12 +997,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SwiftyJSON;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
-		OBJ_108 /* Release */ = {
+		OBJ_154 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -648,8 +1010,8 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tmignore.xcodeproj/SwiftyJSON_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -660,12 +1022,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SwiftyJSON;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
-		OBJ_114 /* Debug */ = {
+		OBJ_160 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -674,7 +1034,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_115 /* Release */ = {
+		OBJ_161 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -683,7 +1043,7 @@
 			};
 			name = Release;
 		};
-		OBJ_120 /* Debug */ = {
+		OBJ_166 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -692,7 +1052,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_121 /* Release */ = {
+		OBJ_167 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -701,7 +1061,7 @@
 			};
 			name = Release;
 		};
-		OBJ_126 /* Debug */ = {
+		OBJ_172 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -710,8 +1070,8 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tmignore.xcodeproj/tmignore_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -720,12 +1080,10 @@
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = tmignore;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		OBJ_127 /* Release */ = {
+		OBJ_173 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -734,8 +1092,8 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tmignore.xcodeproj/tmignore_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -744,12 +1102,10 @@
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = tmignore;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
-		OBJ_144 /* Debug */ = {
+		OBJ_194 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -758,7 +1114,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_145 /* Release */ = {
+		OBJ_195 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -818,7 +1174,7 @@
 			};
 			name = Release;
 		};
-		OBJ_64 /* Debug */ = {
+		OBJ_76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -827,25 +1183,23 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = tmignore.xcodeproj/Logging_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = tmignore.xcodeproj/HeliumLogger_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Logging;
+				PRODUCT_BUNDLE_IDENTIFIER = HeliumLogger;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Logging;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TARGET_NAME = HeliumLogger;
 			};
 			name = Debug;
 		};
-		OBJ_65 /* Release */ = {
+		OBJ_77 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -854,49 +1208,41 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = tmignore.xcodeproj/Logging_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = tmignore.xcodeproj/HeliumLogger_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Logging;
+				PRODUCT_BUNDLE_IDENTIFIER = HeliumLogger;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Logging;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TARGET_NAME = HeliumLogger;
 			};
 			name = Release;
 		};
-		OBJ_73 /* Debug */ = {
+		OBJ_91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = tmignore.xcodeproj/SwiftCLI_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftCLI;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftCLI;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		OBJ_74 /* Release */ = {
+		OBJ_92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -905,74 +1251,127 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = tmignore.xcodeproj/SwiftCLI_Info.plist;
+				INFOPLIST_FILE = tmignore.xcodeproj/LoggerAPI_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftCLI;
+				PRODUCT_BUNDLE_IDENTIFIER = LoggerAPI;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftCLI;
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = LoggerAPI;
+			};
+			name = Debug;
+		};
+		OBJ_97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = tmignore.xcodeproj/LoggerAPI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = LoggerAPI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = LoggerAPI;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_100 /* Build configuration list for PBXNativeTarget "SwiftCLIPackageDescription" */ = {
+		OBJ_104 /* Build configuration list for PBXNativeTarget "LoggerAPIPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_101 /* Debug */,
-				OBJ_102 /* Release */,
+				OBJ_105 /* Debug */,
+				OBJ_106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_106 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		OBJ_109 /* Build configuration list for PBXNativeTarget "Logging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_107 /* Debug */,
-				OBJ_108 /* Release */,
+				OBJ_110 /* Debug */,
+				OBJ_111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_113 /* Build configuration list for PBXNativeTarget "SwiftyJSONPackageDescription" */ = {
+		OBJ_118 /* Build configuration list for PBXNativeTarget "SwiftCLI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_114 /* Debug */,
-				OBJ_115 /* Release */,
+				OBJ_119 /* Debug */,
+				OBJ_120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_119 /* Build configuration list for PBXNativeTarget "swift-logPackageDescription" */ = {
+		OBJ_146 /* Build configuration list for PBXNativeTarget "SwiftCLIPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_120 /* Debug */,
-				OBJ_121 /* Release */,
+				OBJ_147 /* Debug */,
+				OBJ_148 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_125 /* Build configuration list for PBXNativeTarget "tmignore" */ = {
+		OBJ_152 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_126 /* Debug */,
-				OBJ_127 /* Release */,
+				OBJ_153 /* Debug */,
+				OBJ_154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_143 /* Build configuration list for PBXNativeTarget "tmignorePackageDescription" */ = {
+		OBJ_159 /* Build configuration list for PBXNativeTarget "SwiftyJSONPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_144 /* Debug */,
-				OBJ_145 /* Release */,
+				OBJ_160 /* Debug */,
+				OBJ_161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_165 /* Build configuration list for PBXNativeTarget "swift-logPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_166 /* Debug */,
+				OBJ_167 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_171 /* Build configuration list for PBXNativeTarget "tmignore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_172 /* Debug */,
+				OBJ_173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_193 /* Build configuration list for PBXNativeTarget "tmignorePackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_194 /* Debug */,
+				OBJ_195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -986,20 +1385,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_63 /* Build configuration list for PBXNativeTarget "Logging" */ = {
+		OBJ_75 /* Build configuration list for PBXNativeTarget "HeliumLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_64 /* Debug */,
-				OBJ_65 /* Release */,
+				OBJ_76 /* Debug */,
+				OBJ_77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_72 /* Build configuration list for PBXNativeTarget "SwiftCLI" */ = {
+		OBJ_90 /* Build configuration list for PBXNativeTarget "HeliumLoggerPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_73 /* Debug */,
-				OBJ_74 /* Release */,
+				OBJ_91 /* Debug */,
+				OBJ_92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_95 /* Build configuration list for PBXNativeTarget "LoggerAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_96 /* Debug */,
+				OBJ_97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
