@@ -62,9 +62,27 @@ class RunCommand: Command {
 	}
 }
 
+class ListCommand: Command {
+	let name = "list"
+	let shortDescription = "Lists all files/directories that have been excluded by tmignore"
+
+	func execute() {
+		let cache = Cache()
+
+		// Parse all previously added exclusions from the cache file and list those exclusions
+		let cachedExclusions = cache.read()
+		logger.info(
+			"\(cachedExclusions.count) files/directories have been excluded from backups by tmignore:\n"
+		)
+		for path in cachedExclusions {
+			logger.info("  - \(path)")
+		}
+	}
+}
+
 class ResetCommand: Command {
 	let name = "reset"
-	let shortDescription = "Removes all created exclusions and clears the cache"
+	let shortDescription = "Removes all backup exclusions that were made using tmignore"
 
 	func execute() {
 		let cache = Cache()
@@ -84,5 +102,5 @@ class ResetCommand: Command {
 	}
 }
 
-cli.commands = [RunCommand(), ResetCommand()]
+cli.commands = [RunCommand(), ListCommand(), ResetCommand()]
 cli.goAndExit()

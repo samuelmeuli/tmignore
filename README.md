@@ -26,6 +26,12 @@ Time Machine on macOS is a highly useful tool for creating backups of all your f
    brew services start tmignore
    ```
 
+## Commands
+
+- **`run`:** Searches the disk for files/directories ignored by Git and excludes them from future Time Machine backups
+- **`list`:** Lists all files/directories that have been excluded by `tmignore`
+- **`reset`:** Removes all backup exclusions that were made using `tmignore`
+
 ## Configuration
 
 You can configure the behavior of `tmignore` by creating a configuration file at `~/.config/tmignore/config.json`:
@@ -64,14 +70,6 @@ You can configure the behavior of `tmignore` by creating a configuration file at
     ]
   }
   ```
-
-## Uninstall
-
-To remove all backup exclusions that were made using `tmignore`, simply run the following command:
-
-```sh
-tmignore reset
-```
 
 ## Development
 
