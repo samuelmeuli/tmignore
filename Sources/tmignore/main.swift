@@ -24,7 +24,7 @@ class RunCommand: Command {
 		let repoPaths = Git.findRepos(ignoredPaths: config.ignoredPaths)
 
 		// Build list of files/directories which should be excluded from Time Machine backups
-		logger.info("Applying whitelist…")
+		logger.info("Building list of files to exclude from backups…")
 		var exclusions = [String]()
 		for repoPath in repoPaths {
 			for path in Git.getIgnoredFiles(repoPath: repoPath) {
@@ -46,14 +46,8 @@ class RunCommand: Command {
 		) = getDiff(elementsV1: cachedExclusions, elementsV2: exclusions)
 
 		// Add/remove backup exclusions
-		logger.info("Excluding \(exclusionsToAdd.count) files/directories from future backups…")
-		for exclusionToAdd in exclusionsToAdd {
-			TimeMachine.addExclusion(path: exclusionToAdd)
-		}
-		logger.info("Removing \(exclusionsToRemove.count) backup exclusions…")
-		for exclusionToRemove in exclusionsToRemove {
-			TimeMachine.removeExclusion(path: exclusionToRemove)
-		}
+		TimeMachine.addExclusions(paths: exclusionsToAdd)
+		TimeMachine.removeExclusions(paths: exclusionsToRemove)
 
 		// Update cache file
 		cache.write(paths: exclusions)
@@ -89,10 +83,7 @@ class ResetCommand: Command {
 
 		// Parse all previously added exclusions from the cache file and undo those exclusions
 		let cachedExclusions = cache.read()
-		logger.info("Removing \(cachedExclusions.count) backup exclusions…")
-		for path in cachedExclusions {
-			TimeMachine.removeExclusion(path: path)
-		}
+		TimeMachine.removeExclusions(paths: cachedExclusions)
 
 		// Delete the cache directory
 		logger.info("Deleting the cache…")
