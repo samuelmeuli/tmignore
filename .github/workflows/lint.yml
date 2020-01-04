@@ -1,0 +1,21 @@
+name: Lint
+
+on: push
+
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Run linters
+        uses: samuelmeuli/lint-action@v0.3
+        with:
+          github_token: ${{ secrets.github_token }}
+          swiftlint: true
