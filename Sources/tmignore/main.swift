@@ -20,7 +20,7 @@ class RunCommand: Command {
 		// Parse values specified in `config.json` file
 		let config = try Config()
 
-		// Search file system for Git respositories
+		// Search file system for Git repositories
 		let repoPaths = Git.findRepos(ignoredPaths: config.ignoredPaths)
 
 		// Build list of files/directories which should be excluded from Time Machine backups

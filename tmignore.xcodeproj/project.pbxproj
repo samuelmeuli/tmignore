@@ -65,62 +65,63 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "SwiftyJSON::SwiftyJSON";
+			remoteGlobalIDString = SwiftyJSON::SwiftyJSON;
 			remoteInfo = SwiftyJSON;
 		};
 		7E8AD8212364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "SwiftCLI::SwiftCLI";
+			remoteGlobalIDString = SwiftCLI::SwiftCLI;
 			remoteInfo = SwiftCLI;
 		};
 		7E8AD8222364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "HeliumLogger::HeliumLogger";
+			remoteGlobalIDString = HeliumLogger::HeliumLogger;
 			remoteInfo = HeliumLogger;
 		};
 		7E8AD8232364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteGlobalIDString = LoggerAPI::LoggerAPI;
 			remoteInfo = LoggerAPI;
 		};
 		7E8AD8242364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "swift-log::Logging";
+			remoteGlobalIDString = swift-log::Logging;
 			remoteInfo = Logging;
 		};
 		7E8AD8252364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "swift-log::Logging";
+			remoteGlobalIDString = swift-log::Logging;
 			remoteInfo = Logging;
 		};
 		7E8AD8262364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteGlobalIDString = LoggerAPI::LoggerAPI;
 			remoteInfo = LoggerAPI;
 		};
 		7E8AD8272364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "swift-log::Logging";
+			remoteGlobalIDString = swift-log::Logging;
 			remoteInfo = Logging;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7E8AD82B2364C60700017948 /* logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logging.swift; sourceTree = "<group>"; };
+		C9C788E5FC4C0972CC976BFC /* .swiftformat */ = {isa = PBXFileReference; lastKnownFileType = file.swiftformat; path = .swiftformat; sourceTree = "<group>"; };
 		"HeliumLogger::HeliumLogger::Product" /* HeliumLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HeliumLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoggerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -339,6 +340,7 @@
 				OBJ_71 /* Makefile */,
 				OBJ_72 /* homebrew.tmignore.plist */,
 				OBJ_73 /* README.md */,
+				C9C788E5FC4C0972CC976BFC /* .swiftformat */,
 			);
 			name = "";
 			sourceTree = "<group>";

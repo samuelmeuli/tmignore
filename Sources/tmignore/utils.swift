@@ -1,9 +1,7 @@
 import Darwin
 import Foundation
 
-/**
-	Calculates the added and removed elements between two versions of a list (V1 and V2)
-*/
+/// Calculates the added and removed elements between two versions of a list (V1 and V2)
 func getDiff(
 	elementsV1: [String],
 	elementsV2: [String]
@@ -13,18 +11,13 @@ func getDiff(
 	return (Array(setV2.subtracting(setV1)), Array(setV1.subtracting(setV2)))
 }
 
-/**
-	Determines whether the provided path is matched by the glob using the `fnmatch` C function
-
-	Example: `patchMatchesGlob(glob: "*.txt", path: "test.txt")` returns `true`
-*/
+/// Determines whether the provided path is matched by the glob using the `fnmatch` C function.
+/// Example: `patchMatchesGlob(glob: "*.txt", path: "test.txt")` returns `true`
 func pathMatchesGlob(glob: String, path: String) -> Bool {
-	return fnmatch(glob, path, 0) == 0
+	fnmatch(glob, path, 0) == 0
 }
 
-/**
-	Executes the provided shell command, then parses and returns its status and output
-*/
+/// Executes the provided shell command, then parses and returns its status and output
 func runCommand(_ command: String) -> (status: Int32, stdout: String?, stderr: String?) {
 	let task = Process()
 	task.executableURL = URL(fileURLWithPath: "/bin/bash")
@@ -52,10 +45,8 @@ func runCommand(_ command: String) -> (status: Int32, stdout: String?, stderr: S
 	return (status: task.terminationStatus, stdout: outStr, stderr: errStr)
 }
 
-/**
-	Breaks up the provided (optional) string at newline characters and returns the lines as an array
-	of strings
-*/
+/// Breaks up the provided (optional) string at newline characters and returns the lines as an array
+/// of strings
 func splitLines(linesStr: String?, lineSeparator: Character = "\n") -> [String] {
 	if let linesStrNotNil = linesStr {
 		return linesStrNotNil.split(separator: lineSeparator).map { String($0) }

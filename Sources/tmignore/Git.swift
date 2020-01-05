@@ -1,21 +1,17 @@
 import Foundation
 
-/**
-	Class for Git operations
-*/
+/// Class for Git operations
 class Git {
-	/**
-		Returns the list of ignored files for the specified Git repository (both local and global
-		`.gitignore` files are considered)
-	*/
+	/// Returns the list of ignored files for the specified Git repository (both local and global
+	/// `.gitignore` files are considered)
 	static func getIgnoredFiles(repoPath: String) -> [String] {
 		logger.debug("Obtaining list of ignored files for repo at \(repoPath)…")
 		var ignoredFiles = [String]()
 
 		// Let Git list all ignored files/directories
 		// "-C [repoPath]": Directory to run the command in
-		// "--directory": If entire directory is ignored, only list its name (instead of all
-		// contained files)
+		// "--directory": If entire directory is ignored, only list its name (instead of all contained
+		// files)
 		// "--exclude-standard": Also use `.git/info/exclude` and the global `.gitignore` file
 		// "--ignored": List ignored files
 		// "--others": Include untracked files
@@ -29,8 +25,8 @@ class Git {
 				"Error obtaining list of ignored files for repository at path \(repoPath): \(stderr ?? "")"
 			)
 		} else {
-			// Split lines at NUL bytes (output by Git instead of newline characters because of the
-			// "-z" flag)
+			// Split lines at NUL bytes (output by Git instead of newline characters because of the "-z"
+			// flag)
 			let ignoredFilesRel = splitLines(linesStr: stdout, lineSeparator: "\0")
 			ignoredFiles = ignoredFilesRel.map { "\(repoPath)/\($0)" }
 		}
@@ -39,10 +35,8 @@ class Git {
 		return ignoredFiles
 	}
 
-	/**
-		Searches the home directory for Git repositories and returns their paths. Folders specified
-		in `ignoredPaths` aren't traversed
-	*/
+	/// Searches the home directory for Git repositories and returns their paths. Folders specified in
+	/// `ignoredPaths` aren't traversed
 	static func findRepos(ignoredPaths: [String]) -> [String] {
 		var repoPaths = [String]()
 		logger.info("Searching for Git repositories…")

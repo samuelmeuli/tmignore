@@ -1,23 +1,21 @@
 import Foundation
 import SwiftyJSON
 
-/**
-	Functions for reading/writing a cache file for paths which were excluded from Time Machine
-	backups in previous script runs.
-
-	The cache is a JSON file with the following structure:
-
-	```
-	{
-		"paths": [
-			"/path/to/exclusion1",
-			"/path/to/exclusion2"
-		]
-	}
-	```
-*/
+/// Functions for reading/writing a cache file for paths which were excluded from Time Machine
+/// backups in previous script runs.
+///
+/// The cache is a JSON file with the following structure:
+///
+/// ```
+/// {
+///   "paths": [
+///     "/path/to/exclusion1",
+///     "/path/to/exclusion2"
+///   ]
+/// }
+/// ```
 class Cache {
-	// Path to script's cache direcotry (`~/Library/Caches/tmignore`)
+	// Path to script's cache directory (`~/Library/Caches/tmignore`)
 	private let cacheDirPath = FileManager.default.urls(
 		for: .cachesDirectory,
 		in: .userDomainMask
@@ -25,9 +23,7 @@ class Cache {
 
 	private lazy var cacheFilePath = cacheDirPath + "/cache.json"
 
-	/**
-		Deletes the cache directory
-	*/
+	/// Deletes the cache directory
 	func clear() {
 		do {
 			try FileManager.default.removeItem(atPath: cacheDirPath)
@@ -36,9 +32,7 @@ class Cache {
 		}
 	}
 
-	/**
-		Parses the cache file (if it exists) and returns the cached exlusion paths
-	*/
+	/// Parses the cache file (if it exists) and returns the cached exclusion paths
 	func read() -> [String] {
 		var paths = [String]()
 		if let jsonData = NSData(contentsOfFile: cacheFilePath) {
@@ -55,10 +49,8 @@ class Cache {
 		return paths
 	}
 
-	/**
-		Writes the specified exclusion paths into the cache file (which is created in case it
-		doesn't exist yet)
-	*/
+	/// Writes the specified exclusion paths into the cache file (which is created in case it doesn't
+	/// exist yet)
 	func write(paths: [String]) {
 		// Build JSON data which will be written to the cache file
 		var jsonData: Data

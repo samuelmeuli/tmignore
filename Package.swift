@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
 	name: "tmignore",
 	platforms: [
-		.macOS(.v10_13)
+		.macOS(.v10_13),
 	],
 	dependencies: [
 		.package(
@@ -23,7 +23,7 @@ let package = Package(
 		.package(
 			url: "https://github.com/SwiftyJSON/SwiftyJSON",
 			from: "5.0.0"
-		)
+		),
 	],
 	targets: [
 		.target(
@@ -32,8 +32,8 @@ let package = Package(
 				"HeliumLogger",
 				"Logging",
 				"SwiftCLI",
-				"SwiftyJSON"
+				"SwiftyJSON",
 			]
-		)
+		),
 	]
 )

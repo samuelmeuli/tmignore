@@ -11,3 +11,11 @@ build:
 .PHONY: clean
 clean:
 	rm -rf ${BUILD_DIR} ${DIST_DIR}
+
+.PHONY: lint
+lint:
+	swiftlint autocorrect
+
+.PHONY: format
+format:
+	swiftformat .

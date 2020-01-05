@@ -11,11 +11,12 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - name: Install SwiftLint
-        run: brew install swiftlint
+      - name: Install linters
+        run: brew install swiftlint swiftformat
 
       - name: Run linters
-        uses: samuelmeuli/lint-action@v0.3
+        uses: samuelmeuli/lint-action@v0.4
         with:
           github_token: ${{ secrets.github_token }}
           swiftlint: true
+          swiftformat: true
