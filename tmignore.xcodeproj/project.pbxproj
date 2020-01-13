@@ -65,63 +65,73 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = SwiftyJSON::SwiftyJSON;
+			remoteGlobalIDString = "SwiftyJSON::SwiftyJSON";
 			remoteInfo = SwiftyJSON;
 		};
 		7E8AD8212364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = SwiftCLI::SwiftCLI;
+			remoteGlobalIDString = "SwiftCLI::SwiftCLI";
 			remoteInfo = SwiftCLI;
 		};
 		7E8AD8222364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = HeliumLogger::HeliumLogger;
+			remoteGlobalIDString = "HeliumLogger::HeliumLogger";
 			remoteInfo = HeliumLogger;
 		};
 		7E8AD8232364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = LoggerAPI::LoggerAPI;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
 			remoteInfo = LoggerAPI;
 		};
 		7E8AD8242364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = swift-log::Logging;
+			remoteGlobalIDString = "swift-log::Logging";
 			remoteInfo = Logging;
 		};
 		7E8AD8252364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = swift-log::Logging;
+			remoteGlobalIDString = "swift-log::Logging";
 			remoteInfo = Logging;
 		};
 		7E8AD8262364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = LoggerAPI::LoggerAPI;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
 			remoteInfo = LoggerAPI;
 		};
 		7E8AD8272364C19700017948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = swift-log::Logging;
+			remoteGlobalIDString = "swift-log::Logging";
 			remoteInfo = Logging;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E05901A23CC9DAF00E0A77E /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
+		7E05901B23CC9DE500E0A77E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		7E05901C23CC9DE500E0A77E /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		7E05901D23CC9DE500E0A77E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7E05901E23CC9DE500E0A77E /* .swiftformat */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftformat; sourceTree = "<group>"; };
+		7E05901F23CC9DE500E0A77E /* .editorconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = .editorconfig; sourceTree = "<group>"; };
+		7E05902023CC9DF500E0A77E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7E05902123CC9DF500E0A77E /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7E05902223CC9DF500E0A77E /* homebrew.tmignore.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = homebrew.tmignore.plist; sourceTree = "<group>"; };
+		7E05902323CC9DF500E0A77E /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		7E05902423CC9DFC00E0A77E /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Package.resolved; sourceTree = "<group>"; };
 		7E8AD82B2364C60700017948 /* logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logging.swift; sourceTree = "<group>"; };
-		C9C788E5FC4C0972CC976BFC /* .swiftformat */ = {isa = PBXFileReference; lastKnownFileType = file.swiftformat; path = .swiftformat; sourceTree = "<group>"; };
 		"HeliumLogger::HeliumLogger::Product" /* HeliumLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HeliumLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoggerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -165,11 +175,6 @@
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_60 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		OBJ_61 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/samuel/projects/maintained/tmignore/.build/checkouts/swift-log/Package.swift"; sourceTree = "<group>"; };
-		OBJ_69 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dist; sourceTree = SOURCE_ROOT; };
-		OBJ_70 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		OBJ_71 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		OBJ_72 /* homebrew.tmignore.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = homebrew.tmignore.plist; sourceTree = "<group>"; };
-		OBJ_73 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_9 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		"SwiftCLI::SwiftCLI::Product" /* SwiftCLI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftCLI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,22 +332,26 @@
 			path = .build/checkouts/HeliumLogger/Sources/HeliumLogger;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_15 /* Tests */,
 				OBJ_16 /* Dependencies */,
 				OBJ_62 /* Products */,
-				OBJ_69 /* dist */,
-				OBJ_70 /* LICENSE.md */,
-				OBJ_71 /* Makefile */,
-				OBJ_72 /* homebrew.tmignore.plist */,
-				OBJ_73 /* README.md */,
-				C9C788E5FC4C0972CC976BFC /* .swiftformat */,
+				7E05901A23CC9DAF00E0A77E /* .github */,
+				7E05901F23CC9DE500E0A77E /* .editorconfig */,
+				7E05901C23CC9DE500E0A77E /* .gitattributes */,
+				7E05901D23CC9DE500E0A77E /* .gitignore */,
+				7E05901E23CC9DE500E0A77E /* .swiftformat */,
+				7E05901B23CC9DE500E0A77E /* .swiftlint.yml */,
+				7E05902223CC9DF500E0A77E /* homebrew.tmignore.plist */,
+				7E05902323CC9DF500E0A77E /* LICENSE.md */,
+				7E05902123CC9DF500E0A77E /* Makefile */,
+				7E05902423CC9DFC00E0A77E /* Package.resolved */,
+				OBJ_6 /* Package.swift */,
+				7E05902023CC9DF500E0A77E /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_52 /* LoggerAPI 1.9.0 */ = {
@@ -627,7 +636,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
