@@ -13,6 +13,6 @@ jobs:
         with:
           formula-name: tmignore
           homebrew-tap: samuelmeuli/homebrew-tap
-          commit-message: Release `tmignore` {{version}}
+          commit-message: Release `tmignore` v{{version}}
         env:
           COMMITTER_TOKEN: ${{ secrets.COMMITTER_TOKEN }}
