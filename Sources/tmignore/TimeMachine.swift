@@ -1,4 +1,5 @@
 import Foundation
+import SwiftExec
 
 /// Class for modifying the list of files/directories which should be excluded from Time Machine
 /// backups
@@ -30,9 +31,11 @@ class TimeMachine {
 		logger.info("Adding backup exclusions for \(paths.count) paths…")
 
 		for argStr in buildArgStrs(paths: paths) {
-			let (status, _, stdErr) = runCommand("tmutil addexclusion \(argStr)")
-			if status != 0 {
-				logger.error("Failed to add backup exclusions: \(stdErr ?? "")")
+			do {
+				_ = try execBash("tmutil addexclusion \(argStr)")
+			} catch {
+				let error = error as! ExecError
+				logger.error("Failed to add backup exclusions: \(error.execResult.stderr ?? "")")
 			}
 		}
 
@@ -50,11 +53,16 @@ class TimeMachine {
 		logger.info("Removing backup exclusions for \(paths.count) paths…")
 
 		for argStr in buildArgStrs(paths: paths) {
-			let (status, _, stdErr) = runCommand("tmutil removeexclusion \(argStr)")
-			// 213: File path wasn't found and could therefore not be excluded from a Time Machine backup.
-			// This error occurs for cached exclusions which were deleted, therefore it is ignored
-			if status != 0, status != 213 {
-				logger.error("Failed to remove backup exclusions: \(stdErr ?? "")")
+			do {
+				_ = try execBash("tmutil removeexclusion \(argStr)")
+			} catch {
+				let error = error as! ExecError
+				// 213: File path wasn't found and could therefore not be excluded from a Time Machine
+				// backup. This error occurs for cached exclusions which were deleted, therefore it is
+				// ignored
+				if error.execResult.exitCode != 213 {
+					logger.error("Failed to remove backup exclusions: \(error.execResult.stderr ?? "")")
+				}
 			}
 		}
 

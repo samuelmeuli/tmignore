@@ -11,9 +11,19 @@ let package = Package(
 		.package(url: "https://github.com/IBM-Swift/HeliumLogger", from: "1.9.0"),
 		.package(url: "https://github.com/apple/swift-log", from: "1.0.0"),
 		.package(url: "https://github.com/jakeheis/SwiftCLI", from: "6.0.0"),
+		.package(url: "https://github.com/samuelmeuli/swift-exec", "0.1.0" ..< "0.2.0"),
 		.package(url: "https://github.com/SwiftyJSON/SwiftyJSON", from: "5.0.0"),
 	],
 	targets: [
-		.target(name: "tmignore", dependencies: ["HeliumLogger", "Logging", "SwiftCLI", "SwiftyJSON"]),
+		.target(
+			name: "tmignore",
+			dependencies: [
+				"HeliumLogger",
+				"Logging",
+				"SwiftCLI",
+				"SwiftExec",
+				"SwiftyJSON",
+			]
+		),
 	]
 )

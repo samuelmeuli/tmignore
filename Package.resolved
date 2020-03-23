@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "SwiftExec",
+        "repositoryURL": "https://github.com/samuelmeuli/swift-exec",
+        "state": {
+          "branch": null,
+          "revision": "582c2851529665bb39c461944ce40fcb6fe1225c",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "swift-log",
         "repositoryURL": "https://github.com/apple/swift-log",
         "state": {

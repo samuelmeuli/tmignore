@@ -1,4 +1,5 @@
 import Foundation
+import SwiftExec
 
 /// Class for Git operations
 class Git {
@@ -16,19 +17,19 @@ class Git {
 		// "--ignored": List ignored files
 		// "--others": Include untracked files
 		// "-z": Do not encode "unusual" characters (e.g. "ä" is normally listed as "\303\244")
-		let (status, stdout, stderr) = runCommand(
-			"git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others -z"
-		)
-
-		if status != 0 {
-			logger.error(
-				"Error obtaining list of ignored files for repository at path \(repoPath): \(stderr ?? "")"
+		do {
+			let result = try execBash(
+				"git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others -z"
 			)
-		} else {
 			// Split lines at NUL bytes (output by Git instead of newline characters because of the "-z"
 			// flag)
-			let ignoredFilesRel = splitLines(linesStr: stdout, lineSeparator: "\0")
+			let ignoredFilesRel = splitLines(linesStr: result.stdout, lineSeparator: "\0")
 			ignoredFiles = ignoredFilesRel.map { "\(repoPath)/\($0)" }
+		} catch {
+			let error = error as! ExecError
+			logger.error(
+				"Error obtaining list of ignored files for repository at path \(repoPath): \(error.execResult.stderr ?? "")"
+			)
 		}
 
 		logger.debug("Found \(ignoredFiles.count) ignored files for repo at \(repoPath)")
@@ -56,9 +57,13 @@ class Git {
 		command += " -type d -name .git -print"
 
 		// Run the `find` command
-		let (status, stdout, stderr) = runCommand(command)
-		if status != 0 {
-			for errLine in splitLines(linesStr: stderr) {
+		var result: ExecResult
+		do {
+			result = try execBash(command)
+		} catch {
+			let error = error as! ExecError
+			result = error.execResult
+			for errLine in splitLines(linesStr: error.execResult.stderr) {
 				// Ignore permission errors
 				if !errLine.hasSuffix("Operation not permitted") {
 					logger.error("Error searching for Git repositories: \(errLine)")
@@ -67,7 +72,7 @@ class Git {
 		}
 
 		// Build list of `.git` directories (e.g. ["/path/to/repo/.git"])
-		let gitDirs = splitLines(linesStr: stdout)
+		let gitDirs = splitLines(linesStr: result.stdout)
 
 		// Build list of repositories (e.g. ["/path/to/repo"])
 		repoPaths = gitDirs.map { String($0.dropLast(5)) }
