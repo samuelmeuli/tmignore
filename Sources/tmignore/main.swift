@@ -43,7 +43,7 @@ class RunCommand: Command {
 		let (
 			added: exclusionsToAdd,
 			removed: exclusionsToRemove
-		) = getDiff(elementsV1: cachedExclusions, elementsV2: exclusions)
+		) = findDiff(elementsV1: cachedExclusions, elementsV2: exclusions)
 
 		// Add/remove backup exclusions
 		TimeMachine.addExclusions(paths: exclusionsToAdd)

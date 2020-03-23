@@ -2,7 +2,7 @@ import Darwin
 import Foundation
 
 /// Calculates the added and removed elements between two versions of a list (V1 and V2)
-func getDiff(
+func findDiff(
 	elementsV1: [String],
 	elementsV2: [String]
 ) -> (added: [String], removed: [String]) {
