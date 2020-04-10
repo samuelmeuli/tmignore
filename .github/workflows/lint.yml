@@ -1,22 +1,22 @@
 name: Lint
 
-on: push
+on:
+  - pull_request
+  - push
 
 jobs:
-  run-linters:
-    name: Run linters
+  lint:
+    name: Lint
     runs-on: macos-latest
 
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - name: Install linters
+      - name: Install dependencies
         run: brew install swiftlint swiftformat
 
-      - name: Run linters
-        uses: samuelmeuli/lint-action@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          swiftlint: true
-          swiftformat: true
+      - name: Lint
+        run: |
+          swiftlint
+          swiftformat .
