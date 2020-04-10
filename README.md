@@ -6,9 +6,9 @@ Time Machine on macOS is a highly useful tool for creating backups of all your f
 
 ## Install
 
-**Requirements:** macOS 10.13 or newer, Homebrew, Xcode
+macOS 10.13+ is required to run `tmignore`.
 
-1. Build and install the script using Homebrew:
+1. Build and install the script using Homebrew (Xcode is required):
 
    ```sh
    brew install samuelmeuli/tap/tmignore
@@ -25,6 +25,8 @@ Time Machine on macOS is a highly useful tool for creating backups of all your f
    ```sh
    brew services start tmignore
    ```
+
+Alternatively, if you don't want to build the binary yourself, you can download the compiled program on the [Releases](https://github.com/samuelmeuli/tmignore/releases/latest) page.
 
 ## Commands
 
