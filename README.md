@@ -38,40 +38,20 @@ Alternatively, if you don't want to build the binary yourself, you can download 
 
 You can configure the behavior of `tmignore` by creating a configuration file at `~/.config/tmignore/config.json`:
 
-- **`"whitelist"`:** If there are certain files ignored by Git which you _do_ want to back up (e.g. configuration or password files), you can add these files to the whitelist:
+- **`"searchPaths"`:** Directories which should be scanned for Git repositories. Default: `["~"]` (home directory)
 
-  ```js
-  {
-    // Default: []
-    "whitelist": [
-      "*/application.yml",
-      "*/config.json",
-      "*/.env.*"
-    ]
-  }
-  ```
+- **`"ignoredPaths"`:** Directories which should be excluded from the Git repository search. Default: `["~/.Trash", "~/Applications", "~/Downloads", "~/Library", "~/Music/iTunes", "~/Music/Music", "~/Pictures/Photos\\ Library.photoslibrary"]`
 
-- **`"ignoredPaths"`:** You can also prevent `tmignore` from scanning certain folders for Git repositories:
+- **`"whitelist"`:** Files/directories which should be included in backups, even if they are matched by a `.gitignore` file. Useful e.g. for configuration or password files. Default: `[]`
 
-  ```js
-  {
-    /*
-      Default: [
-        "~/.Trash",
-        "~/Applications",
-        "~/Downloads",
-        "~/Library",
-        "~/Music/iTunes",
-        "~/Music/Music",
-        "~/Pictures/Photos\\ Library.photoslibrary"
-      ]
-    */
-    "ignoredPaths": [
-      "~/.Trash",
-      "~/Documents/"
-    ]
-  }
-  ```
+**Configuration example:**
+
+```json
+{
+	"searchPaths": ["~", "/path/to/another/drive"],
+	"whitelist": ["*/application.yml", "*/config.json", "*/.env.*"]
+}
+```
 
 ## Contributing
 

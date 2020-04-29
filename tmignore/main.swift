@@ -11,8 +11,8 @@ let cli = CLI(
 
 class RunCommand: Command {
 	let name = "run"
-	let shortDescription = "Searches the disk for files/directories ignored by Git and excludes " +
-		"them from future Time Machine backups"
+	let shortDescription =
+		"Searches the disk for files/directories ignored by Git and excludes them from future Time Machine backups"
 
 	func execute() throws {
 		let cache = Cache()
@@ -21,12 +21,19 @@ class RunCommand: Command {
 		let config = try Config()
 
 		// Search file system for Git repositories
-		let repoPaths = Git.findRepos(ignoredPaths: config.ignoredPaths)
+		var repoSet = Set<String>()
+		for searchPath in config.searchPaths {
+			let repoList = Git.findRepos(searchPath: searchPath, ignoredPaths: config.ignoredPaths)
+			for repoPath in repoList {
+				repoSet.insert(repoPath)
+			}
+		}
+		logger.info("Found \(repoSet.count) Git repositories in total")
 
 		// Build list of files/directories which should be excluded from Time Machine backups
 		logger.info("Building list of files to exclude from backups…")
 		var exclusions = [String]()
-		for repoPath in repoPaths {
+		for repoPath in repoSet {
 			for path in Git.getIgnoredFiles(repoPath: repoPath) {
 				// Only exclude path from backups if it is not whitelisted
 				if config.whitelist.allSatisfy({ !pathMatchesGlob(glob: $0, path: path) }) {

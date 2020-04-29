@@ -38,12 +38,12 @@ class Git {
 
 	/// Searches the home directory for Git repositories and returns their paths. Folders specified in
 	/// `ignoredPaths` aren't traversed
-	static func findRepos(ignoredPaths: [String]) -> [String] {
+	static func findRepos(searchPath: String, ignoredPaths: [String]) -> [String] {
 		var repoPaths = [String]()
-		logger.info("Searching for Git repositories…")
+		logger.info("Searching for Git repositories in \(searchPath)…")
 
 		// Start building array of arguments for the `find` command
-		var command = "find $HOME"
+		var command = "find \"\(searchPath)\""
 
 		// Tell `find` to skip the ignored paths
 		for ignoredPath in ignoredPaths {
@@ -77,7 +77,7 @@ class Git {
 		// Build list of repositories (e.g. ["/path/to/repo"])
 		repoPaths = gitDirs.map { String($0.dropLast(5)) }
 
-		logger.info("Found \(repoPaths.count) Git repositories")
+		logger.info("Found \(repoPaths.count) Git repositories in \(searchPath)")
 		return repoPaths
 	}
 }
