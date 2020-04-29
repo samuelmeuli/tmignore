@@ -1,8 +1,8 @@
 name: Release
 
 on:
-  - pull_request
   - push
+  - pull_request
 
 jobs:
   release-github:
@@ -14,15 +14,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build
-        run: |
-          make clean
-          make build
+        run: make build
 
       - name: Upload binary to workflow run
         uses: actions/upload-artifact@v1
         with:
           name: tmignore
-          path: ./dist/tmignore
+          path: ./bin/tmignore
 
       - name: Create GitHub release
         if: startsWith(github.ref, 'refs/tags/v') # Only run on tags
@@ -41,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/tmignore
+          asset_path: ./bin/tmignore
           asset_name: tmignore
           asset_content_type: application/octet-stream
 

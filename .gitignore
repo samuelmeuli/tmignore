@@ -1,9 +1,4 @@
-# Build
-dist/
-
-# Swift Package Manager
-.build/
-Packages/
+bin/
 
 # Xcode
 project.xcworkspace/

@@ -73,11 +73,6 @@ You can configure the behavior of `tmignore` by creating a configuration file at
   }
   ```
 
-## Development
-
-1. Clone this repository: `git clone REPO_URL`
-2. Navigate into the project directory: `cd tmignore`
-3. Compile the Swift script: `make build`
-4. Run the script: `./dist/tmignore`
+## Contributing
 
 Suggestions and contributions are always welcome! Please discuss larger changes via issue before submitting a pull request.
