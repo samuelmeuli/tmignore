@@ -67,6 +67,7 @@
 				7E53C0DB24598090001E9D86 /* Products */,
 			);
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		7E53C0DB24598090001E9D86 /* Products */ = {
 			isa = PBXGroup;
