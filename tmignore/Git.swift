@@ -10,16 +10,19 @@ class Git {
 		var ignoredFiles = [String]()
 
 		// Let Git list all ignored files/directories
-		// "-C [repoPath]": Directory to run the command in
-		// "--directory": If entire directory is ignored, only list its name (instead of all contained
-		// files)
-		// "--exclude-standard": Also use `.git/info/exclude` and the global `.gitignore` file
-		// "--ignored": List ignored files
-		// "--others": Include untracked files
-		// "-z": Do not encode "unusual" characters (e.g. "ä" is normally listed as "\303\244")
 		do {
-			let result = try execBash(
-				"git -C '\(repoPath)' ls-files --directory --exclude-standard --ignored --others -z"
+			let result = try exec(
+				program: "/usr/bin/git",
+				arguments: [
+					"-C", // Directory to run the command in
+					repoPath,
+					"ls-files",
+					"--directory", // Do not list contained files of ignored directories
+					"--exclude-standard", // Also use `.git/info/exclude` and global `.gitignore` files
+					"--ignored", // List ignored files
+					"--others", // Include untracked files
+					"-z", // Do not encode "unusual" characters (e.g. "ä" is normally listed as "\303\244")
+				]
 			)
 			// Split lines at NUL bytes (output by Git instead of newline characters because of the "-z"
 			// flag)
@@ -43,23 +46,23 @@ class Git {
 		logger.info("Searching for Git repositories in \(searchPath)…")
 
 		// Start building array of arguments for the `find` command
-		var command = "find \"\(searchPath)\""
+		var arguments = [searchPath]
 
 		// Tell `find` to skip the ignored paths
 		for ignoredPath in ignoredPaths {
-			command += " -path \(ignoredPath) -prune -o"
+			arguments += ["-path", ignoredPath, "-prune", "-o"]
 		}
 
 		// Add the remaining `find` arguments
 		// "-type d": Only search directories
 		// "-name .git": Only search for files/directories named ".git"
 		// "-print": Print the results
-		command += " -type d -name .git -print"
+		arguments += ["-type", "d", "-name", ".git", "-print"]
 
 		// Run the `find` command
 		var result: ExecResult
 		do {
-			result = try execBash(command)
+			result = try exec(program: "/usr/bin/find", arguments: arguments)
 		} catch {
 			let error = error as! ExecError
 			result = error.execResult

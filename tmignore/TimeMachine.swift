@@ -4,22 +4,7 @@ import SwiftExec
 /// Class for modifying the list of files/directories which should be excluded from Time Machine
 /// backups
 class TimeMachine {
-	/// Takes the (potentially long) list of paths and splits it up into smaller chunks. Each chunk is
-	/// converted to a string of the form "'path1' 'path2' 'path3'" so these paths can be passed as
-	/// command arguments. The chunking is necessary because a size limit for shell commands exists
-	private static func buildArgStrs(paths: [String]) -> [String] {
-		let chunkSize = 200
-		var idx = 0
-		var argList = [String]()
-
-		while idx < paths.count {
-			let chunk = paths[idx ..< min(idx + chunkSize, paths.count - 1)]
-			argList.append(chunk.map { "'\($0)'" }.joined(separator: " "))
-			idx += chunkSize
-		}
-
-		return argList
-	}
+	static let chunkSize = 200
 
 	/// Adds the provided path to the list of exclusions (it will not be included in future backups)
 	static func addExclusions(paths: [String]) {
@@ -30,9 +15,9 @@ class TimeMachine {
 
 		logger.info("Adding backup exclusions for \(paths.count) paths…")
 
-		for argStr in buildArgStrs(paths: paths) {
+		for pathChunk in paths.chunked(by: chunkSize) {
 			do {
-				_ = try execBash("tmutil addexclusion \(argStr)")
+				_ = try exec(program: "/usr/bin/tmutil", arguments: ["addexclusion"] + pathChunk)
 			} catch {
 				let error = error as! ExecError
 				logger.error("Failed to add backup exclusions: \(error.execResult.stderr ?? "")")
@@ -52,9 +37,9 @@ class TimeMachine {
 
 		logger.info("Removing backup exclusions for \(paths.count) paths…")
 
-		for argStr in buildArgStrs(paths: paths) {
+		for pathChunk in paths.chunked(by: chunkSize) {
 			do {
-				_ = try execBash("tmutil removeexclusion \(argStr)")
+				_ = try exec(program: "/usr/bin/tmutil", arguments: ["removeexclusion"] + pathChunk)
 			} catch {
 				let error = error as! ExecError
 				// 213: File path wasn't found and could therefore not be excluded from a Time Machine

@@ -1,6 +1,17 @@
 import Darwin
 import Foundation
 
+extension Array {
+	/// Splits the array into smaller chunks.
+	///
+	/// Source: https://stackoverflow.com/a/38156873/6767508
+	func chunked(by chunkSize: Int) -> [[Element]] {
+		stride(from: 0, to: count, by: chunkSize).map {
+			Array(self[$0 ..< Swift.min($0 + chunkSize, self.count)])
+		}
+	}
+}
+
 /// Calculates the added and removed elements between two versions of a list (V1 and V2)
 func findDiff(
 	elementsV1: [String],
