@@ -14,6 +14,13 @@ macOS 10.13+ is required to run `tmignore`.
    brew install samuelmeuli/tap/tmignore
    ```
 
+   or
+
+   ```sh
+   wget https://github.com/samuelmeuli/tmignore/raw/master/tmignore.rb
+   brew install --build-from-source ./tmignore.rb
+   ```
+
 2. If you want to run the script once:
 
    ```sh
