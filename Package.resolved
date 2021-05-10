@@ -1,0 +1,61 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HeliumLogger",
+        "repositoryURL": "https://github.com/IBM-Swift/HeliumLogger.git",
+        "state": {
+          "branch": null,
+          "revision": "55fd2f0b70793017acee853c53cfcf8da0bd8d8d",
+          "version": "1.9.200"
+        }
+      },
+      {
+        "package": "LoggerAPI",
+        "repositoryURL": "https://github.com/Kitura/LoggerAPI.git",
+        "state": {
+          "branch": null,
+          "revision": "e82d34eab3f0b05391082b11ea07d3b70d2f65bb",
+          "version": "1.9.200"
+        }
+      },
+      {
+        "package": "SwiftExec",
+        "repositoryURL": "https://github.com/samuelmeuli/swift-exec.git",
+        "state": {
+          "branch": null,
+          "revision": "4b0c2efb84a56c8885dc39209721fb92e4de0a87",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+          "version": "1.4.2"
+        }
+      },
+      {
+        "package": "SwiftCLI",
+        "repositoryURL": "https://github.com/jakeheis/SwiftCLI.git",
+        "state": {
+          "branch": null,
+          "revision": "2816678bcc37f4833d32abeddbdf5e757fa891d8",
+          "version": "6.0.2"
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
+        "state": {
+          "branch": null,
+          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+          "version": "5.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

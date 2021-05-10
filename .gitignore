@@ -3,3 +3,7 @@ bin/
 # Xcode
 project.xcworkspace/
 xcuserdata/
+
+# SPM
+.build/
+.swiftpm/
